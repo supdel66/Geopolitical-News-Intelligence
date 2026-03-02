@@ -1,0 +1,68 @@
+2026-03-02 14:00:03,218 [INFO] ▶ Starting  : run_pipeline
+2026-03-02 14:00:03,219 [INFO] ============================================================
+2026-03-02 14:00:03,219 [INFO]  PIPELINE START
+2026-03-02 14:00:03,219 [INFO] ============================================================
+2026-03-02 14:00:03,219 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:00:05,110 [INFO]   NewsAPI → 46 articles for 'israel iran war'
+2026-03-02 14:00:05,112 [INFO] ✔ Completed : wrapper in 1.89s
+2026-03-02 14:00:05,112 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:00:05,937 [INFO]   NewsAPI → 46 articles for 'us iran escalation'
+2026-03-02 14:00:05,939 [INFO] ✔ Completed : wrapper in 0.83s
+2026-03-02 14:00:05,939 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:00:06,376 [INFO]   NewsAPI → 49 articles for 'world war 3 nuclear'
+2026-03-02 14:00:06,378 [INFO] ✔ Completed : wrapper in 0.44s
+2026-03-02 14:00:06,378 [INFO] ▶ Starting  : etl_transform_chunked
+2026-03-02 14:00:06,378 [INFO]   ETL: processing 141 articles in chunks of 50
+2026-03-02 14:00:06,435 [INFO]     chunk   1 → kept 48/50
+2026-03-02 14:00:06,458 [INFO]     chunk   2 → kept 37/50
+2026-03-02 14:00:06,476 [INFO]     chunk   3 → kept 39/41
+2026-03-02 14:00:06,479 [INFO]   ETL: 124 unique articles retained
+2026-03-02 14:00:06,479 [INFO] ✔ Completed : etl_transform_chunked in 0.10s
+2026-03-02 14:00:06,479 [INFO] ▶ Starting  : tfidf_cosine_scoring
+2026-03-02 14:00:06,513 [INFO]   NLP scoring complete | Critical: 24 | High: 0
+2026-03-02 14:00:06,513 [INFO] ✔ Completed : tfidf_cosine_scoring in 0.03s
+2026-03-02 14:00:06,513 [INFO] ▶ Starting  : load_to_sqlite
+2026-03-02 14:00:06,531 [INFO]   SQLite: 124 rows → news_pipeline.db
+2026-03-02 14:00:06,532 [INFO] ✔ Completed : load_to_sqlite in 0.02s
+2026-03-02 14:00:06,532 [INFO] ▶ Starting  : run_eda
+2026-03-02 14:00:08,500 [INFO]   EDA figure saved → outputs/geo_news_eda.png
+2026-03-02 14:00:08,506 [INFO] ✔ Completed : run_eda in 1.97s
+2026-03-02 14:00:08,507 [INFO] ▶ Starting  : generate_html_report
+2026-03-02 14:00:08,514 [INFO]   HTML report saved → outputs/report.html
+2026-03-02 14:00:08,514 [INFO] ✔ Completed : generate_html_report in 0.01s
+2026-03-02 14:00:08,525 [INFO]   CSV saved → outputs/articles_scored.csv
+2026-03-02 14:00:08,525 [INFO] ============================================================
+2026-03-02 14:00:08,525 [INFO]  PIPELINE COMPLETE in 5.31s
+2026-03-02 14:00:08,525 [INFO]  Outputs: outputs/
+2026-03-02 14:00:08,525 [INFO] ============================================================
+2026-03-02 14:00:08,525 [INFO] ✔ Completed : run_pipeline in 5.31s
+2026-03-02 14:01:47,552 [INFO] ▶ Starting  : run_pipeline
+2026-03-02 14:01:47,552 [INFO] ============================================================
+2026-03-02 14:01:47,552 [INFO]  PIPELINE START
+2026-03-02 14:01:47,552 [INFO] ============================================================
+2026-03-02 14:01:47,552 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:01:47,960 [INFO]   NewsAPI → 46 articles for 'israel iran war'
+2026-03-02 14:01:47,961 [INFO] ✔ Completed : wrapper in 0.41s
+2026-03-02 14:01:47,961 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:01:48,370 [INFO]   NewsAPI → 46 articles for 'us iran escalation'
+2026-03-02 14:01:48,372 [INFO] ✔ Completed : wrapper in 0.41s
+2026-03-02 14:01:48,372 [INFO] ▶ Starting  : wrapper
+2026-03-02 14:01:48,805 [INFO]   NewsAPI → 49 articles for 'world war 3 nuclear'
+2026-03-02 14:01:48,807 [INFO] ✔ Completed : wrapper in 0.43s
+2026-03-02 14:01:48,807 [INFO] ▶ Starting  : etl_transform_chunked
+2026-03-02 14:01:48,807 [INFO]   ETL: processing 141 articles in chunks of 50
+2026-03-02 14:01:48,838 [INFO]     chunk   1 → kept 48/50
+2026-03-02 14:01:48,860 [INFO]     chunk   2 → kept 37/50
+2026-03-02 14:01:48,877 [INFO]     chunk   3 → kept 39/41
+2026-03-02 14:01:48,878 [INFO]   ETL: 124 unique articles retained
+2026-03-02 14:01:48,878 [INFO] ✔ Completed : etl_transform_chunked in 0.07s
+2026-03-02 14:01:48,878 [INFO] ▶ Starting  : tfidf_cosine_scoring
+2026-03-02 14:01:48,904 [INFO]   NLP scoring complete | Critical: 24 | High: 0
+2026-03-02 14:01:48,904 [INFO] ✔ Completed : tfidf_cosine_scoring in 0.03s
+2026-03-02 14:01:48,904 [INFO] ▶ Starting  : load_to_sqlite
+2026-03-02 14:01:48,954 [INFO]   SQLite: 124 rows → news_pipeline.db
+2026-03-02 14:01:48,955 [INFO] ✔ Completed : load_to_sqlite in 0.05s
+2026-03-02 14:01:48,955 [INFO] ▶ Starting  : run_eda
+2026-03-02 14:01:50,644 [INFO]   EDA figure saved → geo_news_eda.png
+2026-03-02 14:01:50,649 [INFO] ✔ Completed : run_eda in 1.69s
+2026-03-02 14:01:50,649 [INFO] ▶ Starting  : generate_html_report

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Geopolitical Risk Report</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background:#0f1117; color:#eee; margin:0; padding:20px; }
+    h1   { color:#e74c3c; } h2 { color:#5dade2; border-bottom:1px solid #333; padding-bottom:4px; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; }
+    th   { background:#1a1d2e; color:#5dade2; padding:10px; text-align:left; }
+    td   { padding:8px; border-bottom:1px solid #222; font-size:13px; }
+    tr:hover { background:#1e2130; }
+    .stat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin:20px 0; }
+    .stat-card { background:#1a1d2e; border-radius:8px; padding:16px; text-align:center; }
+    .stat-card .val { font-size:2em; font-weight:bold; color:#e74c3c; }
+    .stat-card .lbl { font-size:12px; color:#aaa; margin-top:4px; }
+    img { width:100%; border-radius:8px; margin-top:20px; }
+  </style>
+</head>
+<body>
+  <h1>🌐 Geopolitical Risk Report</h1>
+  <p style="color:#aaa">Generated: 2026-03-02 08:15 UTC |
+     Pipeline: News Scraping → ETL → NLP → EDA</p>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="val">124</div><div class="lbl">Total Articles</div></div>
+    <div class="stat-card"><div class="val" style="color:#e74c3c">24</div><div class="lbl">Critical Risk</div></div>
+    <div class="stat-card"><div class="val" style="color:#e67e22">0</div><div class="lbl">High Risk</div></div>
+    <div class="stat-card"><div class="val" style="color:#5dade2">58</div><div class="lbl">News Sources</div></div>
+  </div>
+
+  <h2>Top 10 Most Geopolitically Relevant Articles</h2>
+  <table>
+    <tr><th>Headline</th><th>Source</th><th>Score</th><th>Risk Tier</th><th>KW Hits</th></tr>
+    
+        <tr>
+          <td>Baba Vanga prediction for World War 3: US-Israel-Iran, Pakistan-Afghanistan, Russia-Ukrain</td>
+          <td>The Times of India</td>
+          <td><b>0.5206</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>UN nuclear watchdog calls emergency meeting on Monday over Iran attacks</td>
+          <td>The Times of India</td>
+          <td><b>0.4907</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>‘Never imagined this in Dubai’: Family WhatsApp chat reveals fear during Iran attacks</td>
+          <td>The Times of India</td>
+          <td><b>0.4678</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Apocalypse Algorithm: AI Always Opts for Nuclear War. Pentagon Responds by Deploying Its T</td>
+          <td>Globalresearch.ca</td>
+          <td><b>0.4628</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Trump Said We ‘Obliterated’ Iran’s Nuclear Program Last June. So Why Are We About To Go Wa</td>
+          <td>Freerepublic.com</td>
+          <td><b>0.2980</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Why did US attack Iran and will it lead to World War 3? Full update on Operation Epic Fury</td>
+          <td>The Times of India</td>
+          <td><b>0.2816</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>‘This could work to Moscow’s advantage in the conflict in Ukraine’: Russian analysts on th</td>
+          <td>RT</td>
+          <td><b>0.2629</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Trump Launches ‘Task Force Scorpion’ as Iran Peace Talks Collapse</td>
+          <td>Naturalnews.com</td>
+          <td><b>0.2619</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Polymarket Bravely Defends Betting On World War 3 As A Valuable Public Service</td>
+          <td>Kotaku</td>
+          <td><b>0.2598</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Tucker Carlson Denounces Trump’s Iran Attack as ‘Absolutely Disgusting and Evil’</td>
+          <td>Freerepublic.com</td>
+          <td><b>0.2508</b></td>
+          <td style="background:#e74c3c;color:#000;font-weight:bold;">Critical</td>
+          <td>1</td>
+        </tr>
+  </table>
+
+  <h2>EDA Dashboard</h2>
+  <img src="geo_news_eda.png" alt="EDA Dashboard">
+</body>
+</html>
