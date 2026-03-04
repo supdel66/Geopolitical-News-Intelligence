@@ -7,13 +7,13 @@ import string
 
 EDA_DIR = "eda_output"
 
-# Keywords used during scraping mapping to geopolitical WW3 context
 KEYWORDS = [
     "war", "iran", "israel", "united states",
     "us", "missile", "attack", "military",
     "retaliation", "conflict", "gaza",
     "tehran", "hezbollah", "world war 3", 
-    "ww3", "escalation", "nuclear"
+    "ww3", "escalation", "nuclear", "drone",
+    "strike", "idf", "hamas", "houthi", "sanction"
 ]
 
 def clean_text(text):
@@ -24,6 +24,8 @@ def clean_text(text):
     return text
 
 def run_eda(df):
+    stats = {}
+
     if not os.path.exists(EDA_DIR):
         os.makedirs(EDA_DIR)
         
@@ -34,16 +36,20 @@ def run_eda(df):
     print("Generating EDA charts...")
     sns.set_theme(style="whitegrid")
     
-    # === 1. Sources Distribution ===
+    stats['total_articles'] = int(len(df))
+    
+    # === 1. Sources Distribution (Top 10) ===
     plt.figure(figsize=(10, 6))
-    source_counts = df['source'].value_counts()
+    source_counts = df['source'].value_counts().head(10)
     sns.barplot(x=source_counts.values, y=source_counts.index, hue=source_counts.index, palette="viridis", legend=False)
-    plt.title('News Articles by Source', fontsize=14)
+    plt.title('Top 10 News Sources by Article Count', fontsize=14)
     plt.xlabel('Number of Articles')
     plt.ylabel('Source')
     plt.tight_layout()
     plt.savefig(os.path.join(EDA_DIR, "top_sources.png"))
     plt.close()
+    
+    stats['top_sources'] = source_counts.to_dict()
     print("-> Saved top sources chart.")
 
     # === 2. Keyword Frequency Analysis ===
@@ -67,6 +73,8 @@ def run_eda(df):
                                   key=lambda item: item[1], reverse=True)[:15])
     
     if sorted_keywords:
+        stats['top_keywords'] = sorted_keywords
+        
         plt.figure(figsize=(12, 6))
         sns.barplot(x=list(sorted_keywords.keys()), y=list(sorted_keywords.values()), hue=list(sorted_keywords.keys()), palette="magma", legend=False)
         plt.title('Top Target Keyword Frequencies in Scraped Articles', fontsize=14)
@@ -105,7 +113,16 @@ def run_eda(df):
     df['word_count'] = df['combined_text'].apply(lambda x: len(x.split()))
     if not df['word_count'].empty and df['word_count'].max() > 0:
         plt.figure(figsize=(10, 6))
+        mean_words = df['word_count'].mean()
+        median_words = df['word_count'].median()
+        
+        stats['mean_words'] = float(mean_words)
+        stats['median_words'] = float(median_words)
+        
         sns.histplot(df['word_count'], bins=20, color="#3498db", kde=True)
+        plt.axvline(mean_words, color='r', linestyle='dashed', linewidth=2, label=f'Mean: {mean_words:.1f}')
+        plt.axvline(median_words, color='g', linestyle='dashed', linewidth=2, label=f'Median: {median_words:.1f}')
+        plt.legend()
         plt.title('Distribution of Article Word Counts', fontsize=14)
         plt.xlabel('Word Count (Title + Content)')
         plt.ylabel('Frequency')
@@ -115,3 +132,4 @@ def run_eda(df):
         print("-> Saved article length distribution chart.")
 
     print("EDA execution completed successfully.")
+    return stats

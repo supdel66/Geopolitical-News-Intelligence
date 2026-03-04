@@ -8,6 +8,8 @@ from database.db import init_db, save_articles, get_all_articles
 from scraper.scraper import scrape_all_sources
 from eda_code.eda import run_eda
 from database.vector_db import store_articles_in_vector_db
+from eda_code.vector_eda import run_vector_eda
+from eda_code.report_generator import generate_html_report
 
 def main():
     print("=====================================================")
@@ -35,16 +37,26 @@ def main():
     df = get_all_articles()
 
     # Generate EDA
-    print("\n[INFO] Firing up the EDA module...")
-    run_eda(df)
+    print("\n[INFO] Firing up the SQLite EDA module...")
+    sqlite_stats = run_eda(df)
 
     # Embed and Store in Vector Database
     print("\n[INFO] Launching Vector Database Embedding Sequence...")
-    # store_articles_in_vector_db(df)
+    # Note: store_articles_in_vector_db chunks text, upserts to ChromaDB, 
+    # and ensures Ollama has the nomic-embed-text representations.
+    store_articles_in_vector_db(df)
+    
+    # Generate Vector DB EDA
+    print("\n[INFO] Generating Vector Search EDA Metrics...")
+    vector_stats = run_vector_eda()
+    
+    # Generate Final Report
+    print("\n[INFO] Building HTML Dashboard...")
+    generate_html_report(sqlite_stats, vector_stats)
 
     print("\n=====================================================")
     print("            PIPELINE EXECUTION COMPLETE              ")
-    print("   Please check 'eda_output' and 'chromadb' folder   ")
+    print("   Please open 'eda_output/report.html' to view it   ")
     print("=====================================================")
 
 if __name__ == "__main__":

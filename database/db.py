@@ -20,9 +20,18 @@ def init_db():
             published_at TEXT,
             link TEXT,
             scraped_at TEXT,
+            img_link TEXT,
             UNIQUE(link)
         )
     ''')
+    
+    # Try to add img_link column if the database already existed without it
+    try:
+        cursor.execute('ALTER TABLE articles ADD COLUMN img_link TEXT')
+    except sqlite3.OperationalError:
+        # Column already exists
+        pass
+        
     conn.commit()
     conn.close()
     print("Database initialized.")
@@ -41,15 +50,16 @@ def save_articles(articles):
         try:
             cursor.execute('''
                 INSERT OR IGNORE INTO articles 
-                (source, title, content, published_at, link, scraped_at)
-                VALUES (?, ?, ?, ?, ?, ?)
+                (source, title, content, published_at, link, scraped_at, img_link)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (
                 article.get("source", ""),
                 article.get("title", ""),
                 article.get("content", ""),
                 article.get("published_at", ""),
                 article.get("link", ""),
-                article.get("scraped_at", "")
+                article.get("scraped_at", ""),
+                article.get("img_link", "")
             ))
             if cursor.rowcount > 0:
                 saved_count += 1
@@ -66,3 +76,5 @@ def get_all_articles():
     df = pd.read_sql_query("SELECT * FROM articles", conn)
     conn.close()
     return df
+
+

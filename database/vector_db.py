@@ -5,10 +5,10 @@ import pandas as pd
 
 CHROMA_DIR = "chromadb"
 
-def chunk_text(text, max_length=1000):
+def chunk_text(text, max_length=500):
     """
-    Manually chunk text into pieces of ~1000 characters.
-    Splits by sentences to avoid cutting sentences in half.
+    Manually chunk text into pieces of strictly <= max_length characters.
+    Attempts to split by sentences, but enforces a hard limit for excessively long blocks.
     """
     if not text or not isinstance(text, str):
         return []
@@ -24,6 +24,21 @@ def chunk_text(text, max_length=1000):
         if not sentence: continue
         sentence += ". "
         
+        # If the sentence itself is larger than the max_length limit, 
+        # we MUST slice it up forcibly into smaller sub-chunks so it doesn't crash Ollama
+        if len(sentence) > max_length:
+            # First, save whatever current chunk we were building if it exists
+            if current_chunk:
+                chunks.append(current_chunk.strip())
+                current_chunk = ""
+                
+            # Now, force-split the massive sentence into strict max_length sized chunks
+            for i in range(0, len(sentence), max_length):
+                sub_chunk = sentence[i:i+max_length]
+                if sub_chunk:
+                    chunks.append(sub_chunk.strip())
+            continue
+            
         # If adding the new sentence keeps us under the limit, add it
         if len(current_chunk) + len(sentence) <= max_length:
             current_chunk += sentence
@@ -85,7 +100,7 @@ def store_articles_in_vector_db(df):
         full_text = f"{title}. {content}"
         
         # Call our manual Python chunker
-        chunks = chunk_text(full_text, max_length=1000)
+        chunks = chunk_text(full_text, max_length=500)
         
         for i, chunk in enumerate(chunks):
             if chunk: 
@@ -105,8 +120,8 @@ def store_articles_in_vector_db(df):
     if documents:
         print(f"[VectorDB] Sending {chunk_counter} chunked items to Ollama & saving to ChromaDB...")
         # Upsert adds new items or updates existing items based on chunk_id
-        # We process in batches of 100 to ensure local Ollama isn't overwhelmed instantly
-        batch_size = 100
+        # We process in batches of 50 to ensure local Ollama isn't overwhelmed instantly
+        batch_size = 50
         for i in range(0, len(documents), batch_size):
             end_idx = i + batch_size
             collection.upsert(
