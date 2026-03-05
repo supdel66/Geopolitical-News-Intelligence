@@ -1,0 +1,6 @@
+238f85291fc94ea5a7c6c6bed099d352 //api key for newsapi.org  
+ 
+
+https://feeds.bbci.co.uk/news/rss.xml  //bbc rss 
+https://www.aljazeera.com/xml/rss/all.xml  //aljazeera rss
+https://www.theguardian.com/world/rss   ///guardian news
