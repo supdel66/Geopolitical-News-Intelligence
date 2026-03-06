@@ -221,6 +221,7 @@ def fetch_newsapi_news(api_key, queries=None):
     "us", "missile", "attack", "military",
     "retaliation", "conflict", "gaza",
     "tehran", "hezbollah"]
+    
     KEYWORDS = [
         "war", "iran", "israel", "united states",
         "us", "missile", "attack", "military",
