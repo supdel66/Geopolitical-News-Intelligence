@@ -1,10 +1,12 @@
 import sqlite3
 import pandas as pd
 import os
+from utils import timer_logger
 
 DB_DIR = "sqlite_databases"
 DB_PATH = os.path.join(DB_DIR, "news.db")
 
+@timer_logger
 def init_db():
     if not os.path.exists(DB_DIR):
         os.makedirs(DB_DIR)
@@ -37,6 +39,7 @@ def init_db():
     print("Database initialized.")
 
 
+@timer_logger
 def save_articles(articles):
     if not articles:
         print("No articles to save.")
@@ -71,10 +74,24 @@ def save_articles(articles):
     print(f"Saved {saved_count} new articles to database.")
 
 
+@timer_logger
 def get_all_articles():
     conn = sqlite3.connect(DB_PATH)
     df = pd.read_sql_query("SELECT * FROM articles", conn)
     conn.close()
     return df
 
-
+@timer_logger
+def is_article_saved(url: str) -> bool:
+    """
+    Checks if an article with exactly this `link` already exists in the SQLite database.
+    """
+    if not os.path.exists(DB_PATH):
+        return False
+        
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+    cursor.execute("SELECT 1 FROM articles WHERE link = ?", (url,))
+    exists = cursor.fetchone() is not None
+    conn.close()
+    return exists

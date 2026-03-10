@@ -4,6 +4,7 @@ import seaborn as sns
 from collections import Counter
 import pandas as pd
 import string
+from utils import timer_logger, logger
 
 EDA_DIR = "eda_output"
 
@@ -23,6 +24,7 @@ def clean_text(text):
     text = text.translate(str.maketrans("", "", string.punctuation))
     return text
 
+@timer_logger
 def run_eda(df):
     stats = {}
 
@@ -30,10 +32,10 @@ def run_eda(df):
         os.makedirs(EDA_DIR)
         
     if df.empty:
-        print("No data available for EDA.")
+        logger.warning("No data available for EDA.")
         return
 
-    print("Generating EDA charts...")
+    logger.info("Generating EDA charts...")
     sns.set_theme(style="whitegrid")
     
     stats['total_articles'] = int(len(df))
@@ -50,7 +52,7 @@ def run_eda(df):
     plt.close()
     
     stats['top_sources'] = source_counts.to_dict()
-    print("-> Saved top sources chart.")
+    logger.info("Saved top sources chart.")
 
     # === 2. Keyword Frequency Analysis ===
     df['combined_text'] = (df['title'].fillna('') + " " + df['content'].fillna('')).apply(clean_text)
@@ -84,7 +86,7 @@ def run_eda(df):
         plt.tight_layout()
         plt.savefig(os.path.join(EDA_DIR, "top_keywords.png"))
         plt.close()
-        print("-> Saved top keywords chart.")
+        logger.info("Saved top keywords chart.")
 
     # === 3. Timeline / Published Date Basis ===
     # Attempt to parse dates robustly
@@ -105,9 +107,9 @@ def run_eda(df):
         plt.tight_layout()
         plt.savefig(os.path.join(EDA_DIR, "articles_over_time.png"))
         plt.close()
-        print("-> Saved timeline chart.")
+        logger.info("Saved timeline chart.")
     else:
-        print("-> Could not parse dates for timeline chart.")
+        logger.warning("Could not parse dates for timeline chart.")
 
     # === 4. Article Length Distribution ===
     df['word_count'] = df['combined_text'].apply(lambda x: len(x.split()))
@@ -129,7 +131,7 @@ def run_eda(df):
         plt.tight_layout()
         plt.savefig(os.path.join(EDA_DIR, "article_length_dist.png"))
         plt.close()
-        print("-> Saved article length distribution chart.")
+        logger.info("Saved article length distribution chart.")
 
-    print("EDA execution completed successfully.")
+    logger.info("EDA execution completed successfully.")
     return stats

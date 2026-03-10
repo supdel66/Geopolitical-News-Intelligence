@@ -4,6 +4,7 @@ import chromadb.utils.embedding_functions as embedding_functions
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from utils import timer_logger, logger
 
 CHROMA_DIR = "chromadb"
 EDA_DIR = "eda_output"
@@ -18,15 +19,16 @@ THEMES = {
     "Global Economy & Oil": "oil price brent crude opec shipping route supply chain inflation global economy market trade route"
 }
 
+@timer_logger
 def run_vector_eda():
     if not os.path.exists(CHROMA_DIR):
-        print(f"[Vector EDA] ChromaDB directory '{CHROMA_DIR}' not found. Cannot run Vector EDA.")
+        logger.warning(f"[Vector EDA] ChromaDB directory '{CHROMA_DIR}' not found. Cannot run Vector EDA.")
         return {}
         
     if not os.path.exists(EDA_DIR):
         os.makedirs(EDA_DIR)
         
-    print("[Vector EDA] Initializing ChromaDB persistent client...")
+    logger.info("[Vector EDA] Initializing ChromaDB persistent client...")
     client = chromadb.PersistentClient(path=CHROMA_DIR)
     
     ollama_ef = embedding_functions.OllamaEmbeddingFunction(
@@ -37,7 +39,7 @@ def run_vector_eda():
     try:
         collection = client.get_collection(name="news_articles", embedding_function=ollama_ef)
     except Exception as e:
-        print(f"[Vector EDA] Could not get collection: {e}")
+        logger.error(f"[Vector EDA] Could not get collection: {e}")
         return {}
 
     stats = {
@@ -45,7 +47,7 @@ def run_vector_eda():
         "theme_distances": {}
     }
     
-    print("[Vector EDA] Querying themes...")
+    logger.info("[Vector EDA] Querying themes...")
     
     for theme_name, theme_query in THEMES.items():
         try:
@@ -79,11 +81,11 @@ def run_vector_eda():
                 stats["theme_distances"][theme_name] = 0.0
                 
         except Exception as e:
-            print(f"[Vector EDA] Error querying theme '{theme_name}': {e}")
+            logger.error(f"[Vector EDA] Error querying theme '{theme_name}': {e}")
             stats["theme_counts"][theme_name] = 0
             stats["theme_distances"][theme_name] = 0.0
 
-    print("[Vector EDA] Generating Vector DB Charts...")
+    logger.info("[Vector EDA] Generating Vector DB Charts...")
     sns.set_theme(style="whitegrid")
     
     # === 1. Top Themes by Article Count ===
@@ -100,7 +102,7 @@ def run_vector_eda():
         plt.tight_layout()
         plt.savefig(os.path.join(EDA_DIR, "vector_themes_volume.png"))
         plt.close()
-        print("-> Saved vector theme volume chart.")
+        logger.info("Saved vector theme volume chart.")
     
     # === 2. Average Semantic Distance (Relevance) ===
     dists = stats["theme_distances"]
@@ -120,7 +122,7 @@ def run_vector_eda():
         plt.tight_layout()
         plt.savefig(os.path.join(EDA_DIR, "vector_themes_relevance.png"))
         plt.close()
-        print("-> Saved vector theme relevance chart.")
+        logger.info("Saved vector theme relevance chart.")
         
-    print("[Vector EDA] Execution completed.\n")
+    logger.info("[Vector EDA] Execution completed.")
     return stats

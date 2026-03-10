@@ -2,6 +2,7 @@ import chromadb
 import chromadb.utils.embedding_functions as embedding_functions
 import os
 import pandas as pd
+from utils import timer_logger, logger
 
 CHROMA_DIR = "chromadb"
 
@@ -55,22 +56,23 @@ def chunk_text(text, max_length=500):
         
     return chunks
 
+@timer_logger
 def store_articles_in_vector_db(df):
     """
     Takes the SQLite dataframe, chunks the text natively, 
     and inserts it into a local ChromaDB instance via Ollama.
     """
     if df.empty:
-        print("[VectorDB] No articles provided to store.")
+        logger.warning("[VectorDB] No articles provided to store.")
         return
 
-    print("\n[VectorDB] Initializing ChromaDB persistent client...")
+    logger.info("[VectorDB] Initializing ChromaDB persistent client...")
     if not os.path.exists(CHROMA_DIR):
         os.makedirs(CHROMA_DIR)
         
     client = chromadb.PersistentClient(path=CHROMA_DIR)
     
-    print("[VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...")
+    logger.info("[VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...")
     # This natively communicates with your local Ollama instance running on port 11434
     ollama_ef = embedding_functions.OllamaEmbeddingFunction(
         url="http://localhost:11434/api/embeddings",
@@ -89,7 +91,7 @@ def store_articles_in_vector_db(df):
     
     chunk_counter = 0
 
-    print("[VectorDB] Chunking articles manually and preparing for insertion...")
+    logger.info("[VectorDB] Chunking articles manually and preparing for insertion...")
     for index, row in df.iterrows():
         # Using SQLite auto-increment ID if available
         article_id = str(row.get('id', index))
@@ -118,7 +120,7 @@ def store_articles_in_vector_db(df):
                 chunk_counter += 1
 
     if documents:
-        print(f"[VectorDB] Sending {chunk_counter} chunked items to Ollama & saving to ChromaDB...")
+        logger.info(f"[VectorDB] Sending {chunk_counter} chunked items to Ollama & saving to ChromaDB...")
         # Upsert adds new items or updates existing items based on chunk_id
         # We process in batches of 50 to ensure local Ollama isn't overwhelmed instantly
         batch_size = 50
@@ -129,6 +131,6 @@ def store_articles_in_vector_db(df):
                 metadatas=metadatas[i:end_idx],
                 ids=ids[i:end_idx]
             )
-        print("[VectorDB] Insertion complete! Your articles are now embedded.")
+        logger.info("[VectorDB] Insertion complete! Your articles are now embedded.")
     else:
-        print("[VectorDB] No textual chunks created.")
+        logger.warning("[VectorDB] No textual chunks created.")

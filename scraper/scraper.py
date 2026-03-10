@@ -3,6 +3,8 @@ import requests
 import feedparser
 from bs4 import BeautifulSoup
 from datetime import datetime
+from utils import timer_logger
+from database.db import is_article_saved
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
@@ -168,19 +170,24 @@ def extract_full_article_newsapi(url):
         print(f"Error scraping NewsAPI article {url}: {e}")
         return "", ""
 
+@timer_logger
 def fetch_rss_news():
     articles = []
     for source_name, rss_url in RSS_SOURCES.items():
         print(f"Scraping RSS: {source_name}...")
         try:
             feed = feedparser.parse(rss_url)
-            for entry in feed.entries: 
+            for entry in feed.entries[:15]: 
                 #save entry to txt file 
                 title = entry.get("title", "")
                 link = entry.get("link", "")
                 published = entry.get("published", "")
                 img_link, full_text = "", ""
                 
+                if is_article_saved(link):
+                    print(f"Skipping RSS article already in DB: {link}")
+                    continue
+
                 if source_name in ["Washington_Post", "New_York_Times"]:
                     full_text = entry.get('value', entry.get('summary', ''))
                     img_link = entry.get('media_content', [{}])[0].get('url', '')
@@ -213,6 +220,7 @@ def fetch_rss_news():
             
     return articles
 
+@timer_logger
 def fetch_newsapi_news(api_key, queries=None):
     if queries is None:
 
@@ -251,7 +259,7 @@ def fetch_newsapi_news(api_key, queries=None):
             "q": query,
             "sortBy": "publishedAt",
             "language": "en",
-            "pageSize": 100,
+            "pageSize": 10,
             "apiKey": api_key,
         }
         try:
@@ -265,6 +273,10 @@ def fetch_newsapi_news(api_key, queries=None):
                     published_at = item.get("publishedAt", "")
                     link = item.get("url", "")
                     
+                    if is_article_saved(link):
+                        print(f"Skipping NewsAPI article already in DB: {link}")
+                        continue
+
                     img_link, full_text = extract_full_article_newsapi(link)
                     
                     if is_conflict_related(title + " " + content + " " + full_text):
@@ -284,6 +296,7 @@ def fetch_newsapi_news(api_key, queries=None):
             
     return articles
 
+@timer_logger
 def scrape_all_sources(api_key=None):
     all_articles = []
     print("Starting RSS scraping...")

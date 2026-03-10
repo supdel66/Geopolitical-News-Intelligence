@@ -1,8 +1,10 @@
 import os
 from datetime import datetime
+from utils import timer_logger, logger
 
 EDA_DIR = "eda_output"
 
+@timer_logger
 def generate_html_report(sqlite_stats, vector_stats):
     """
     Generates a dark-themed HTML dashboard integrating all EDA outputs.
@@ -212,4 +214,4 @@ def generate_html_report(sqlite_stats, vector_stats):
     with open(report_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
         
-    print(f"[Report] Successfully generated HTML Dashboard at: {report_path}")
+    logger.info(f"[Report] Successfully generated HTML Dashboard at: {report_path}")
