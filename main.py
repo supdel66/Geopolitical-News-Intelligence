@@ -23,14 +23,14 @@ def main():
     # Define API keys and settings
     newsapi_key = os.environ.get("NEWSAPI_KEY", "a752bdf354ee4625b3ed58d906eec969") # Adding the default provided in scripts for convenience
     
-    # Scrape News
-    print("\n[INFO] Scraping recent geopolitical articles...")
-    articles = scrape_all_sources(api_key=newsapi_key)
-    print(f"-> Extracted {len(articles)} relevant articles.")
+    # # Scrape News
+    # print("\n[INFO] Scraping recent geopolitical articles...")
+    # articles = scrape_all_sources(api_key=newsapi_key)
+    # print(f"-> Extracted {len(articles)} relevant articles.")
 
-    # Save to Database
-    print("\n[INFO] Saving articles to the database...")
-    save_articles(articles)
+    # # Save to Database
+    # print("\n[INFO] Saving articles to the database...")
+    # save_articles(articles)
 
     # Fetch from DB to run EDA
     print("\n[INFO] Extracting data from database for analysis...")

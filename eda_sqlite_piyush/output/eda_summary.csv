@@ -1,0 +1,14 @@
+,0
+rows,954
+unique_sources,225
+unique_links,954
+parseable_dates,105
+duplicate_links,0
+duplicate_titles_exact,25
+duplicate_titles_normalized,29
+similar_title_pairs,11
+anova_status,skipped (scipy not installed)
+forecast_status,ok
+last_date,2026-03-05
+last_30d_mean,2.7
+forecast_rows,7

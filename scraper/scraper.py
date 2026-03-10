@@ -174,7 +174,7 @@ def fetch_rss_news():
         print(f"Scraping RSS: {source_name}...")
         try:
             feed = feedparser.parse(rss_url)
-            for entry in feed.entries: 
+            for entry in feed.entries[0:2]: 
                 #save entry to txt file 
                 title = entry.get("title", "")
                 link = entry.get("link", "")
@@ -250,7 +250,7 @@ def fetch_newsapi_news(api_key, queries=None):
             "q": query,
             "sortBy": "publishedAt",
             "language": "en",
-            "pageSize": 100,
+            "pageSize": 10,
             "apiKey": api_key,
         }
         try:

@@ -1,2 +1,3 @@
 chromadb/
 sqlite_databases/
+.venv/
