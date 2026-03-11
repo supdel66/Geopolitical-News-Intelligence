@@ -922,3 +922,1544 @@
 2026-03-10 14:59:42,098 - PipelineLogger - INFO -   Please open 'eda_output/report.html' to view it  
 2026-03-10 14:59:42,098 - PipelineLogger - INFO - =============================================
 2026-03-10 14:59:42,100 - PipelineLogger - INFO - Finished execution of 'main' in 2822.6632 seconds.
+2026-03-11 22:29:37,242 - matplotlib.font_manager - INFO - Failed to extract font properties from /usr/share/fonts/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+2026-03-11 22:29:38,039 - matplotlib.font_manager - INFO - generated new fontManager
+2026-03-11 22:29:38,199 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:29:38,200 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:29:38,560 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:29:38,560 - PipelineLogger - INFO - =============================================
+2026-03-11 22:29:38,560 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:29:38,560 - PipelineLogger - INFO - =============================================
+2026-03-11 22:29:38,560 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:29:38,561 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:29:38,570 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0096 seconds.
+2026-03-11 22:29:38,570 - PipelineLogger - INFO - Scraping recent geopolitical articles...
+2026-03-11 22:29:38,570 - PipelineLogger - INFO - Starting execution of 'scrape_all_sources'
+2026-03-11 22:29:38,570 - PipelineLogger - INFO - Starting execution of 'fetch_rss_news'
+2026-03-11 22:29:39,235 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,245 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:29:39,247 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,247 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:29:39,248 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,248 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,249 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,249 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,250 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,250 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,250 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,250 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,251 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,251 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,252 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,252 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,252 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,252 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,253 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,253 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,253 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,253 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,254 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,254 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,254 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,254 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,255 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,255 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:39,255 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:39,256 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:29:41,109 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:41,119 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:29:41,363 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:41,363 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:42,809 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:42,809 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:43,886 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:43,886 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:44,922 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:44,923 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:45,153 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:45,153 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:55,182 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:55,183 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0005 seconds.
+2026-03-11 22:29:55,841 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:55,842 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:56,089 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:56,089 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:56,301 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:56,301 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:56,979 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:56,989 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:29:57,162 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:57,162 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:57,326 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:57,336 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:29:57,487 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:57,487 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:57,712 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:57,713 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:57,891 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:57,892 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:58,111 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:58,111 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:58,306 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:58,307 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:59,401 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:59,401 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:59,574 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:59,574 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:59,733 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:59,733 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:29:59,913 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:29:59,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:00,076 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:00,077 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:00,237 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:00,237 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:00,413 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:00,413 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:00,939 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:00,949 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:30:01,345 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:01,345 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:01,583 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:01,592 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0095 seconds.
+2026-03-11 22:30:01,939 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:01,949 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:02,184 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:02,184 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:02,556 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:02,557 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:02,791 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:02,791 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:03,153 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:03,153 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:03,520 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:03,520 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:03,880 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:03,881 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:04,123 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:04,123 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:04,374 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:04,374 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:04,727 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,730 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,740 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:05,740 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,740 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:05,740 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:30:05,742 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:05,743 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,145 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,155 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:30:06,156 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,156 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:06,157 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,157 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,157 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,158 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,158 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,159 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,159 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,159 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,160 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,160 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,160 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,160 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,161 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,161 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,162 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,162 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,162 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,162 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,163 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,163 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,163 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,163 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,164 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,164 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,164 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,164 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,903 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,913 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:06,913 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,913 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,914 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,915 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,915 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:06,915 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:06,915 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:08,574 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:08,584 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:08,584 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:08,584 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:08,584 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:08,584 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:09,273 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:09,273 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:09,948 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:09,948 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:11,020 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:11,021 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:12,439 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:12,440 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:13,557 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:13,557 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:14,654 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:14,655 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:15,692 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:15,692 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:16,791 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:16,791 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:17,844 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:17,844 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:18,954 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:18,954 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:20,003 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:20,003 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:21,378 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:21,379 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:32,766 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:32,776 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:32,777 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:33,520 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:33,530 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:33,530 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:33,530 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:33,531 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:33,531 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:33,531 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:33,531 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:30:34,235 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:34,236 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:34,810 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:34,820 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:35,966 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:35,966 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:36,564 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:36,573 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:30:38,126 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:38,127 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:38,857 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:38,857 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:39,595 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:39,595 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:40,161 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:40,171 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:40,888 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:40,889 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:41,883 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:41,883 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:42,579 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:42,579 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:43,169 - PipelineLogger - INFO - Finished execution of 'fetch_rss_news' in 64.5990 seconds.
+2026-03-11 22:30:43,169 - PipelineLogger - INFO - Starting execution of 'fetch_newsapi_news'
+2026-03-11 22:30:44,267 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:44,267 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:30:47,392 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:47,402 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0095 seconds.
+2026-03-11 22:30:47,607 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:47,607 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:49,580 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:49,590 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:30:51,109 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:51,109 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:52,860 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:52,860 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:53,297 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:53,307 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:53,763 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:53,773 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:30:53,773 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:53,774 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:30:55,167 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:55,167 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:56,732 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:56,733 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0005 seconds.
+2026-03-11 22:30:57,217 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:57,218 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:58,826 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:58,827 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:30:58,828 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:30:58,828 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:00,650 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:00,650 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:00,923 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:00,924 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:02,198 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:02,199 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:03,495 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:03,495 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:05,142 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:05,142 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:05,374 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:05,374 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:08,618 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:08,619 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:09,131 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:09,131 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:10,034 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:10,035 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:10,036 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:10,036 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:10,037 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:10,037 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:10,654 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:10,654 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:10,960 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:10,960 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:12,246 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:12,246 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:12,946 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:12,955 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:31:13,493 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:13,494 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:13,900 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:13,901 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:15,317 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:15,327 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:31:17,419 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:17,419 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:17,530 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:17,530 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:17,531 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:17,532 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:17,532 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:17,532 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:17,607 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:17,608 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:18,161 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:18,171 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0096 seconds.
+2026-03-11 22:31:19,611 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:19,612 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:19,821 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:19,821 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:20,741 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:20,751 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0098 seconds.
+2026-03-11 22:31:21,685 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:21,686 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:22,761 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:22,761 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:24,014 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:24,014 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:24,829 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:24,839 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:31:26,131 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:26,132 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:28,290 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:28,290 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:28,817 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:28,818 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:30,371 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:30,371 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:31,464 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:31,465 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:31,620 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:31,621 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:32,897 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:32,898 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:32,899 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:32,899 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:33,248 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:33,249 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:34,563 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:34,564 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:35,054 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:35,054 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:36,484 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:36,484 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:36,485 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:36,485 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:37,947 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:37,948 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:38,438 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:38,439 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:39,988 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:39,988 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:40,221 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:40,222 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:40,222 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:40,223 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:40,223 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:40,223 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:40,224 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:40,224 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:40,516 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:40,517 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:41,058 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:41,058 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:41,112 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:41,112 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:42,000 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:42,001 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:43,595 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:43,595 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:43,910 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:43,910 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:45,467 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:45,468 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:45,469 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:45,469 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:45,470 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:45,470 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:31:45,550 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:45,550 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:45,857 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:45,857 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:46,963 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:46,963 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:47,255 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:47,256 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:47,560 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:47,560 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:47,703 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:47,704 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:47,990 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:47,991 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:48,900 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:48,900 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:50,767 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:50,767 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:52,530 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:52,531 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:54,249 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:54,250 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:55,123 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:55,123 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:55,508 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:55,508 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:56,322 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:56,322 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:57,152 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:57,153 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:57,628 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:57,629 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:58,001 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:58,002 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:31:59,556 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:59,556 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:31:59,617 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:59,618 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0004 seconds.
+2026-03-11 22:31:59,867 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:31:59,868 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:01,109 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:01,119 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0097 seconds.
+2026-03-11 22:32:02,524 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:02,525 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:02,526 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:02,526 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:03,365 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:03,366 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:03,793 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:03,793 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:04,110 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:04,110 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:04,185 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:04,186 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:05,312 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:05,312 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:07,393 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:07,393 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:08,203 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:08,204 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:09,079 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:09,079 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:10,591 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:10,591 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:11,440 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:11,440 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:13,069 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:13,070 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:13,634 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:13,635 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:14,890 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:14,891 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:14,891 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:14,891 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:32:14,892 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:14,892 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:32:14,893 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:14,893 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:32:14,977 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:14,977 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:22,122 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:22,122 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:23,250 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:23,250 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:23,456 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:23,456 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:25,504 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:25,504 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:26,962 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:26,963 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:27,221 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:27,221 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:27,511 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:27,511 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:27,512 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:27,522 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0095 seconds.
+2026-03-11 22:32:27,721 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:27,722 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:28,756 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:28,756 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:29,808 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:29,809 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:32:30,456 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:32:30,457 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:32:30,675 - PipelineLogger - INFO - Finished execution of 'fetch_newsapi_news' in 107.5059 seconds.
+2026-03-11 22:32:30,675 - PipelineLogger - INFO - Finished execution of 'scrape_all_sources' in 172.1051 seconds.
+2026-03-11 22:32:30,675 - PipelineLogger - INFO - Extracted 204 relevant articles.
+2026-03-11 22:32:30,675 - PipelineLogger - INFO - Saving articles to the database...
+2026-03-11 22:32:30,675 - PipelineLogger - INFO - Starting execution of 'save_articles'
+2026-03-11 22:32:30,697 - PipelineLogger - INFO - Finished execution of 'save_articles' in 0.0219 seconds.
+2026-03-11 22:32:30,698 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:32:30,698 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:32:30,717 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0195 seconds.
+2026-03-11 22:32:30,717 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:32:30,717 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:32:30,717 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:32:30,852 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:32:30,951 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:32:31,219 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:32:31,327 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:32:31,463 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:32:31,885 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:32:32,153 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:32:32,715 - PipelineLogger - ERROR - Error executing 'run_eda' after 1.9974 seconds: underlying array is read-only
+2026-03-11 22:32:32,715 - PipelineLogger - ERROR - Error executing 'main' after 174.1545 seconds: underlying array is read-only
+2026-03-11 22:36:14,144 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:36:14,144 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - =============================================
+2026-03-11 22:36:14,461 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - =============================================
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0002 seconds.
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Scraping recent geopolitical articles...
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Starting execution of 'scrape_all_sources'
+2026-03-11 22:36:14,461 - PipelineLogger - INFO - Starting execution of 'fetch_rss_news'
+2026-03-11 22:36:14,990 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,990 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:14,992 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,992 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,992 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,992 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,993 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,993 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,993 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,993 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,994 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,994 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,994 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,994 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,995 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,995 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,995 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,995 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,995 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:14,996 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,693 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,694 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,694 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,694 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,694 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,694 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,811 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,812 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:16,813 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,048 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:17,049 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,137 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,138 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,479 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,480 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:18,481 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,481 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,481 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,481 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,482 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,483 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,483 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,483 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,484 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,484 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,484 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,484 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,667 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:18,668 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:20,092 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:20,093 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0000 seconds.
+2026-03-11 22:36:21,199 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:21,200 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:36:22,261 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:22,262 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:23,437 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:23,437 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:36:24,506 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:24,506 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:24,506 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:24,506 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0001 seconds.
+2026-03-11 22:36:25,554 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:25,554 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:26,650 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:26,651 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0003 seconds.
+2026-03-11 22:36:27,730 - PipelineLogger - INFO - Starting execution of 'is_article_saved'
+2026-03-11 22:36:27,730 - PipelineLogger - INFO - Finished execution of 'is_article_saved' in 0.0002 seconds.
+2026-03-11 22:36:59,832 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:36:59,833 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - =============================================
+2026-03-11 22:37:00,133 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - =============================================
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0002 seconds.
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:37:00,133 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:37:00,144 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0104 seconds.
+2026-03-11 22:37:00,144 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:37:00,144 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:37:00,144 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:37:00,285 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:37:00,379 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:37:00,637 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:37:00,734 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:37:00,858 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:37:01,288 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:37:01,555 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:37:02,065 - PipelineLogger - ERROR - Error executing 'run_eda' after 1.9210 seconds: underlying array is read-only
+2026-03-11 22:37:02,065 - PipelineLogger - ERROR - Error executing 'main' after 1.9320 seconds: underlying array is read-only
+2026-03-11 22:37:46,703 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:37:46,703 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - =============================================
+2026-03-11 22:37:47,036 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - =============================================
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0002 seconds.
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:37:47,036 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:37:47,049 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0126 seconds.
+2026-03-11 22:37:47,049 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:37:47,049 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:37:47,049 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:37:47,210 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:37:47,307 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:37:47,585 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:37:47,696 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:37:47,830 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:37:48,257 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:37:48,527 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:37:49,255 - PipelineLogger - INFO - [EDA 8/13] Escalation scores...
+2026-03-11 22:37:49,569 - PipelineLogger - INFO - [EDA 9/13] Sentiment analysis...
+2026-03-11 22:37:49,820 - PipelineLogger - INFO - [EDA 10/13] Source publication velocity...
+2026-03-11 22:37:49,950 - PipelineLogger - INFO - [EDA 11/13] N-gram analysis...
+2026-03-11 22:37:49,951 - PipelineLogger - INFO - [EDA 12/13] WW3 Threat Level...
+2026-03-11 22:37:50,032 - PipelineLogger - INFO - [EDA 13/13] Weekly coverage heatmap...
+2026-03-11 22:37:50,141 - PipelineLogger - INFO - EDA execution completed successfully.
+2026-03-11 22:37:50,152 - PipelineLogger - INFO - Finished execution of 'run_eda' in 3.1027 seconds.
+2026-03-11 22:37:50,152 - PipelineLogger - INFO - Launching Vector Database Embedding Sequence...
+2026-03-11 22:37:50,152 - PipelineLogger - INFO - Starting execution of 'store_articles_in_vector_db'
+2026-03-11 22:37:50,152 - PipelineLogger - INFO - [VectorDB] Initializing ChromaDB persistent client...
+2026-03-11 22:37:50,268 - PipelineLogger - INFO - [VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...
+2026-03-11 22:37:50,334 - PipelineLogger - INFO - [VectorDB] Chunking articles manually and preparing for insertion...
+2026-03-11 22:37:50,437 - PipelineLogger - INFO - [VectorDB] Sending 19561 chunked items to Ollama & saving to ChromaDB...
+2026-03-11 22:37:50,440 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:37:50,441 - PipelineLogger - ERROR - Error executing 'store_articles_in_vector_db' after 0.2891 seconds: model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:37:50,441 - PipelineLogger - ERROR - Error executing 'main' after 3.4050 seconds: model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:42:34,372 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:42:34,372 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:42:34,707 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - =============================================
+2026-03-11 22:42:34,708 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - =============================================
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0003 seconds.
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:42:34,708 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:42:34,720 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0124 seconds.
+2026-03-11 22:42:34,720 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:42:34,721 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:42:34,721 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:42:34,890 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:42:35,000 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:42:35,292 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:42:35,403 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:42:35,538 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:42:35,982 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:42:36,259 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:42:37,014 - PipelineLogger - INFO - [EDA 8/13] Escalation scores...
+2026-03-11 22:42:37,322 - PipelineLogger - INFO - [EDA 9/13] Sentiment analysis...
+2026-03-11 22:42:37,583 - PipelineLogger - INFO - [EDA 10/13] Source publication velocity...
+2026-03-11 22:42:37,711 - PipelineLogger - INFO - [EDA 11/13] N-gram analysis...
+2026-03-11 22:42:37,711 - PipelineLogger - INFO - [EDA 12/13] WW3 Threat Level...
+2026-03-11 22:42:37,783 - PipelineLogger - INFO - [EDA 13/13] Weekly coverage heatmap...
+2026-03-11 22:42:37,881 - PipelineLogger - INFO - EDA execution completed successfully.
+2026-03-11 22:42:37,891 - PipelineLogger - INFO - Finished execution of 'run_eda' in 3.1701 seconds.
+2026-03-11 22:42:37,891 - PipelineLogger - INFO - Launching Vector Database Embedding Sequence...
+2026-03-11 22:42:37,891 - PipelineLogger - INFO - Starting execution of 'store_articles_in_vector_db'
+2026-03-11 22:42:37,891 - PipelineLogger - INFO - [VectorDB] Initializing ChromaDB persistent client...
+2026-03-11 22:42:37,966 - PipelineLogger - INFO - [VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...
+2026-03-11 22:42:38,028 - PipelineLogger - INFO - [VectorDB] Chunking articles manually and preparing for insertion...
+2026-03-11 22:42:38,132 - PipelineLogger - INFO - [VectorDB] Sending 19561 chunked items to Ollama & saving to ChromaDB...
+2026-03-11 22:42:40,925 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:41,792 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:42,463 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:43,070 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:43,711 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:44,335 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:44,983 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:45,626 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:46,301 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:46,966 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:47,628 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:48,241 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:48,898 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:49,504 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:50,125 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:50,762 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:51,378 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:52,001 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:52,628 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:53,257 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:53,936 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:54,596 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:55,252 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:55,921 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:56,563 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:57,205 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:57,835 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:58,461 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:59,104 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:42:59,752 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:00,434 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:01,100 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:01,752 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:02,432 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:03,114 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:03,788 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:04,444 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:05,121 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:05,783 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:06,448 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:07,130 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:07,763 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:08,409 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:09,051 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:09,703 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:10,377 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:11,021 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:11,654 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:12,293 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:12,918 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:13,575 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:14,232 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:14,876 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:15,519 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:16,157 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:16,834 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:17,483 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:18,133 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:18,817 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:19,497 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:20,178 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:20,793 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:21,462 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:22,132 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:22,779 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:23,409 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:24,052 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:24,725 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:25,365 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:26,052 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:26,821 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:27,485 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:28,138 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:28,802 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:29,501 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:30,186 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:30,821 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:31,475 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:32,164 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:32,833 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:33,547 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:34,232 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:34,994 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:35,672 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:36,333 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:37,043 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:37,757 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:38,519 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:39,246 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:39,923 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:40,602 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:41,286 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:41,959 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:42,612 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:43,274 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:44,050 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:44,696 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:45,382 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:46,070 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:46,704 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:47,401 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:48,055 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:48,716 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:49,430 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:51,156 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:43:51,156 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:43:51,507 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:43:51,507 - PipelineLogger - INFO - =============================================
+2026-03-11 22:43:51,507 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:43:51,507 - PipelineLogger - INFO - =============================================
+2026-03-11 22:43:51,508 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:43:51,508 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:43:51,508 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0002 seconds.
+2026-03-11 22:43:51,508 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:43:51,508 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:43:51,520 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0124 seconds.
+2026-03-11 22:43:51,520 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:43:51,520 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:43:51,520 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:43:51,675 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:43:51,781 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:43:52,060 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:43:52,166 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:43:52,298 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:43:52,728 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:43:52,995 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:43:53,708 - PipelineLogger - INFO - [EDA 8/13] Escalation scores...
+2026-03-11 22:43:54,009 - PipelineLogger - INFO - [EDA 9/13] Sentiment analysis...
+2026-03-11 22:43:54,263 - PipelineLogger - INFO - [EDA 10/13] Source publication velocity...
+2026-03-11 22:43:54,398 - PipelineLogger - INFO - [EDA 11/13] N-gram analysis...
+2026-03-11 22:43:54,398 - PipelineLogger - INFO - [EDA 12/13] WW3 Threat Level...
+2026-03-11 22:43:54,478 - PipelineLogger - INFO - [EDA 13/13] Weekly coverage heatmap...
+2026-03-11 22:43:54,582 - PipelineLogger - INFO - EDA execution completed successfully.
+2026-03-11 22:43:54,593 - PipelineLogger - INFO - Finished execution of 'run_eda' in 3.0730 seconds.
+2026-03-11 22:43:54,593 - PipelineLogger - INFO - Launching Vector Database Embedding Sequence...
+2026-03-11 22:43:54,594 - PipelineLogger - INFO - Starting execution of 'store_articles_in_vector_db'
+2026-03-11 22:43:54,594 - PipelineLogger - INFO - [VectorDB] Initializing ChromaDB persistent client...
+2026-03-11 22:43:54,672 - PipelineLogger - INFO - [VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...
+2026-03-11 22:43:54,732 - PipelineLogger - INFO - [VectorDB] Chunking articles manually and preparing for insertion...
+2026-03-11 22:43:54,835 - PipelineLogger - INFO - [VectorDB] Sending 19561 chunked items to Ollama & saving to ChromaDB...
+2026-03-11 22:43:55,418 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:56,128 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:56,783 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:57,413 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:58,094 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:58,727 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:43:59,400 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:00,081 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:00,768 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:01,465 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:02,147 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:02,801 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:03,478 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:04,099 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:04,784 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:05,453 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:06,126 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:06,806 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:07,468 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:08,191 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:08,870 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:09,507 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:10,145 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:10,796 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:11,432 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:12,102 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:12,777 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:13,424 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:14,070 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:14,721 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:15,369 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:16,046 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:16,743 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:17,416 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:18,079 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:18,752 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:19,417 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:20,137 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:20,781 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:22,476 - PipelineLogger - WARNING - [EDA] textblob not installed — sentiment analysis will be skipped.
+2026-03-11 22:44:22,476 - PipelineLogger - WARNING - [EDA] scikit-learn not installed — n-gram / TF-IDF analyses will be skipped.
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Starting execution of 'main'
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - =============================================
+2026-03-11 22:44:22,800 - PipelineLogger - INFO -  Geopolitical News Pipeline / WW3 Context Analyzer 
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - =============================================
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Initializing SQLite database...
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Starting execution of 'init_db'
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Finished execution of 'init_db' in 0.0002 seconds.
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Extracting data from database for analysis...
+2026-03-11 22:44:22,800 - PipelineLogger - INFO - Starting execution of 'get_all_articles'
+2026-03-11 22:44:22,812 - PipelineLogger - INFO - Finished execution of 'get_all_articles' in 0.0121 seconds.
+2026-03-11 22:44:22,812 - PipelineLogger - INFO - Firing up the SQLite EDA module...
+2026-03-11 22:44:22,812 - PipelineLogger - INFO - Starting execution of 'run_eda'
+2026-03-11 22:44:22,812 - PipelineLogger - INFO - Generating EDA charts...
+2026-03-11 22:44:22,971 - PipelineLogger - INFO - [EDA 1/13] Top sources...
+2026-03-11 22:44:23,077 - PipelineLogger - INFO - [EDA 2/13] Keyword frequency...
+2026-03-11 22:44:23,353 - PipelineLogger - INFO - [EDA 3/13] Timeline...
+2026-03-11 22:44:23,462 - PipelineLogger - INFO - [EDA 4/13] Length distribution...
+2026-03-11 22:44:23,596 - PipelineLogger - INFO - [EDA 5/13] Actor mentions...
+2026-03-11 22:44:24,029 - PipelineLogger - INFO - [EDA 6/13] Conflict theaters...
+2026-03-11 22:44:24,330 - PipelineLogger - INFO - [EDA 7/13] Actor co-occurrence heatmap...
+2026-03-11 22:44:25,117 - PipelineLogger - INFO - [EDA 8/13] Escalation scores...
+2026-03-11 22:44:25,451 - PipelineLogger - INFO - [EDA 9/13] Sentiment analysis...
+2026-03-11 22:44:25,727 - PipelineLogger - INFO - [EDA 10/13] Source publication velocity...
+2026-03-11 22:44:25,865 - PipelineLogger - INFO - [EDA 11/13] N-gram analysis...
+2026-03-11 22:44:25,866 - PipelineLogger - INFO - [EDA 12/13] WW3 Threat Level...
+2026-03-11 22:44:25,950 - PipelineLogger - INFO - [EDA 13/13] Weekly coverage heatmap...
+2026-03-11 22:44:26,064 - PipelineLogger - INFO - EDA execution completed successfully.
+2026-03-11 22:44:26,076 - PipelineLogger - INFO - Finished execution of 'run_eda' in 3.2633 seconds.
+2026-03-11 22:44:26,076 - PipelineLogger - INFO - Launching Vector Database Embedding Sequence...
+2026-03-11 22:44:26,076 - PipelineLogger - INFO - Starting execution of 'store_articles_in_vector_db'
+2026-03-11 22:44:26,076 - PipelineLogger - INFO - [VectorDB] Initializing ChromaDB persistent client...
+2026-03-11 22:44:26,161 - PipelineLogger - INFO - [VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...
+2026-03-11 22:44:26,214 - PipelineLogger - INFO - [VectorDB] Chunking articles manually and preparing for insertion...
+2026-03-11 22:44:26,326 - PipelineLogger - INFO - [VectorDB] Sending 19561 chunked items to Ollama & saving to ChromaDB...
+2026-03-11 22:44:26,889 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:27,576 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:28,240 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:28,859 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:29,501 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:30,126 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:30,784 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:31,426 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:32,139 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:32,812 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:33,481 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:34,124 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:34,788 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:35,458 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:36,130 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:36,780 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:37,452 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:38,102 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:38,774 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:39,403 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:40,053 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:40,723 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:41,385 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:42,023 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:42,696 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:43,381 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:44,045 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:44,685 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:45,367 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:46,032 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:46,688 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:47,362 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:48,019 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:48,710 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:49,366 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:50,026 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:50,665 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:51,368 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:52,082 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:52,766 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:53,425 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:54,092 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:54,770 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:55,422 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:56,041 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:56,715 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:57,362 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:57,978 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:58,606 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:59,241 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:44:59,884 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:00,538 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:01,166 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:01,804 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:02,465 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:03,143 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:03,834 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:04,488 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:05,217 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:05,889 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:06,547 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:07,181 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:07,864 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:08,527 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:09,189 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:09,849 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:10,510 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:11,156 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:11,800 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:12,492 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:13,252 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:13,940 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:14,589 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:15,254 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:15,928 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:16,602 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:17,227 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:17,854 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:18,580 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:19,296 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:19,965 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:20,637 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:21,369 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:22,073 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:22,732 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:23,414 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:24,103 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:24,839 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:25,558 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:26,274 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:26,975 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:27,644 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:28,318 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:28,955 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:29,651 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:30,422 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:31,121 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:31,830 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:32,576 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:33,244 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:33,912 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:34,599 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:35,263 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:35,976 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:36,697 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:37,399 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:38,104 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:38,799 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:39,454 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:40,160 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:40,906 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:41,585 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:42,258 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:42,971 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:43,646 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:44,340 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:45,021 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:45,751 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:46,462 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:47,087 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:47,750 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:48,462 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:49,174 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:49,889 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:50,526 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:51,188 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:51,881 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:52,528 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:53,211 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:53,896 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:54,556 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:55,209 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:55,849 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:56,498 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:57,173 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:57,924 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:58,661 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:45:59,448 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:00,271 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:01,005 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:01,742 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:02,474 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:03,186 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:03,836 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:04,490 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:05,143 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:05,791 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:06,426 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:07,069 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:07,757 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:08,444 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:09,089 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:09,775 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:10,450 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:11,106 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:11,814 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:12,486 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:13,150 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:13,828 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:14,472 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:15,108 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:15,772 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:16,395 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:17,053 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:17,709 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:18,348 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:19,009 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:19,666 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:20,278 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:20,941 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:21,616 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:22,268 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:22,899 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:23,533 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:24,193 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:24,832 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:25,602 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:26,355 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:27,133 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:27,889 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:28,572 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:29,228 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:29,888 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:30,537 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:31,204 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:31,845 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:32,521 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:33,175 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:33,845 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:34,537 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:35,192 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:35,876 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:36,516 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:37,201 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:37,859 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:38,533 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:39,196 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:39,853 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:40,583 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:41,229 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:41,876 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:42,506 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:43,190 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:43,893 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:44,585 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:45,270 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:45,926 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:46,612 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:47,255 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:47,916 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:48,601 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:49,247 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:49,867 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:50,505 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:51,143 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:51,786 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:52,421 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:53,073 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:53,773 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:54,419 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:55,044 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:55,673 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:56,311 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:56,933 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:57,581 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:58,206 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:58,826 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:46:59,547 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:00,281 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:01,010 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:01,770 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:02,403 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:03,067 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:03,722 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:04,376 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:05,015 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:05,684 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:06,351 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:07,024 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:07,675 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:08,281 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:08,920 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:09,535 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:10,167 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:10,813 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:11,467 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:12,101 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:12,750 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:13,410 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:14,023 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:14,674 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:15,319 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:15,972 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:16,639 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:17,304 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:17,966 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:18,636 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:19,278 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:19,983 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:20,638 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:21,269 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:21,902 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:22,575 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:23,238 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:23,924 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:24,561 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:25,190 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:25,822 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:26,480 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:27,151 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:27,794 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:28,492 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:29,180 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:29,824 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:30,494 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:31,167 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:31,818 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:32,469 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:33,153 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:33,753 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:34,406 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:35,096 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:35,770 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:36,437 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:37,063 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:37,689 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:38,332 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:38,971 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:39,617 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:40,286 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:40,927 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:41,578 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:42,245 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:42,907 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:43,559 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:44,196 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:44,838 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:45,501 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:46,217 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:46,861 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:47,512 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:48,178 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:48,818 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:49,450 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:50,092 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:50,743 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:51,383 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:52,024 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:52,667 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:53,348 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:53,988 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:54,636 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:55,266 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:55,921 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:56,578 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:57,248 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:57,875 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:58,513 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:59,307 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:47:59,992 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:00,657 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:01,336 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:01,965 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:02,609 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:03,272 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:03,950 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:04,582 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:05,214 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:05,853 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:06,520 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:07,162 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:07,855 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:08,555 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:09,335 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:10,079 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:10,804 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:11,509 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:12,172 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:12,889 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:13,602 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:14,292 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:14,980 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:15,672 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:16,354 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:17,021 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:17,675 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:18,355 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:19,034 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:19,737 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:20,453 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:21,138 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:21,821 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:22,530 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:23,236 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:23,934 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:24,602 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:25,333 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:26,076 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:26,893 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:27,591 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:28,307 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:29,030 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:29,721 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:30,377 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:31,107 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:31,761 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:32,409 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:33,046 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:33,652 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:34,294 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:34,928 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:35,578 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:36,211 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:36,819 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:37,476 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:38,140 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:38,793 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:39,437 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:40,145 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:40,768 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:41,447 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:42,095 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:42,745 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:43,405 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:44,059 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:44,669 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:45,328 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:45,966 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:46,604 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:47,273 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:47,962 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:48,205 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-03-11 22:48:48,261 - PipelineLogger - INFO - [VectorDB] Insertion complete! Your articles are now embedded.
+2026-03-11 22:48:48,266 - PipelineLogger - INFO - Finished execution of 'store_articles_in_vector_db' in 262.1905 seconds.
+2026-03-11 22:48:48,266 - PipelineLogger - INFO - Generating Vector Search EDA Metrics...
+2026-03-11 22:48:48,266 - PipelineLogger - INFO - Starting execution of 'run_vector_eda'
+2026-03-11 22:48:48,266 - PipelineLogger - INFO - [Vector EDA] Initializing ChromaDB persistent client...
+2026-03-11 22:48:48,274 - PipelineLogger - INFO - [Vector EDA] Querying themes...
+2026-03-11 22:48:48,276 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,276 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'WW3 / Escalation': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,277 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,277 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'US-Israel': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,278 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,278 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'Israel-Iran': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,279 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,279 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'Iran-US': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,280 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,280 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'Middle East Conflict': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,281 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,281 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'Europe/Russia Context': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,282 - httpx - INFO - HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 404 Not Found"
+2026-03-11 22:48:48,283 - PipelineLogger - ERROR - [Vector EDA] Error querying theme 'Global Economy & Oil': model "nomic-embed-text" not found, try pulling it first (status code: 404)
+2026-03-11 22:48:48,283 - PipelineLogger - INFO - [Vector EDA] Generating Vector DB Charts...
+2026-03-11 22:48:48,283 - PipelineLogger - INFO - [Vector EDA] Execution completed.
+2026-03-11 22:48:48,283 - PipelineLogger - INFO - Finished execution of 'run_vector_eda' in 0.0170 seconds.
+2026-03-11 22:48:48,283 - PipelineLogger - INFO - Building HTML Dashboard...
+2026-03-11 22:48:48,283 - PipelineLogger - INFO - Starting execution of 'generate_html_report'
+2026-03-11 22:48:48,284 - PipelineLogger - INFO - [Report] HTML dashboard generated at: eda_output/report.html
+2026-03-11 22:48:48,284 - PipelineLogger - INFO - Finished execution of 'generate_html_report' in 0.0003 seconds.
+2026-03-11 22:48:48,284 - PipelineLogger - INFO - =============================================
+2026-03-11 22:48:48,284 - PipelineLogger - INFO -            PIPELINE EXECUTION COMPLETE       
+2026-03-11 22:48:48,284 - PipelineLogger - INFO -   Please open 'eda_output/report.html' to view it  
+2026-03-11 22:48:48,284 - PipelineLogger - INFO - =============================================
+2026-03-11 22:48:48,285 - PipelineLogger - INFO - Finished execution of 'main' in 265.4852 seconds.

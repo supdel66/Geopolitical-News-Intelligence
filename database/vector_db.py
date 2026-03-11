@@ -76,7 +76,7 @@ def store_articles_in_vector_db(df):
     # This natively communicates with your local Ollama instance running on port 11434
     ollama_ef = embedding_functions.OllamaEmbeddingFunction(
         url="http://localhost:11434/api/embeddings",
-        model_name="nomic-embed-text",
+        model_name="qwen3-embedding:0.6B",
     )
     
     # Get or create the table (collection)

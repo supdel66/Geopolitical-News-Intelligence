@@ -353,7 +353,9 @@ def run_eda(df):
                 if i_a != i_b:
                     comat.loc[i_a, i_b] += 1
 
-    np.fill_diagonal(comat.values, 0)
+    comat_arr = comat.to_numpy(copy=True)
+    np.fill_diagonal(comat_arr, 0)
+    comat = pd.DataFrame(comat_arr, index=comat.index, columns=comat.columns)
 
     fig, ax = plt.subplots(figsize=(10, 8), facecolor=DARK_BG)
     mask = comat == 0
