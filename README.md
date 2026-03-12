@@ -1,139 +1,167 @@
-# Geopolitical News Pipeline & WW3 Context Analyzer
+# Geopolitical News Intelligence Pipeline
 
-An automated, end-to-end Python ETL pipeline designed to scrape, store, embed, and analyze geopolitical news articles with a specific focus on global conflicts, escalation themes, and WW3 context analysis. The project features dual-database architecture, semantic search capabilities via RAG (Retrieval-Augmented Generation), and comprehensive exploratory data analysis.
+A sophisticated **ETL (Extract-Transform-Load) pipeline** for collecting, analyzing, and querying conflict-related news from multiple global sources. Features NLP-powered sentiment analysis, escalation scoring, statistical hypothesis testing, and a **RAG (Retrieval-Augmented Generation) chatbot** interface powered by local LLMs.
 
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
+- [Architecture](#architecture)
 - [Features](#features)
-- [System Architecture](#system-architecture)
+- [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
-- [Configuration](#configuration)
 - [Usage](#usage)
-- [Component Documentation](#component-documentation)
-  - [1. Data Extraction Layer (Scraper)](#1-data-extraction-layer-scraper)
-  - [2. Database Layer](#2-database-layer)
-  - [3. EDA & Analytics Layer](#3-eda--analytics-layer)
-  - [4. RAG API Layer](#4-rag-api-layer)
-  - [5. Frontend Layer](#5-frontend-layer)
-- [Output Artifacts](#output-artifacts)
+  - [Running the ETL Pipeline](#running-the-etl-pipeline)
+  - [Starting the RAG Backend](#starting-the-rag-backend)
+  - [Starting the Frontend](#starting-the-frontend)
+- [Components Deep Dive](#components-deep-dive)
+  - [Data Extraction (Scraper)](#data-extraction-scraper)
+  - [Database Layer](#database-layer)
+  - [EDA & Statistical Analysis](#eda--statistical-analysis)
+  - [RAG Backend](#rag-backend)
+  - [Frontend Interface](#frontend-interface)
+- [Analysis Output](#analysis-output)
+- [Configuration](#configuration)
 - [API Reference](#api-reference)
 - [Dependencies](#dependencies)
-- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 ---
 
 ## Overview
 
-This project implements a complete data pipeline for monitoring and analyzing global conflict news:
+This project builds an end-to-end news intelligence system that:
 
-1. **Extract**: Fetches articles from 10+ RSS feeds and NewsAPI using keyword-based filtering
-2. **Transform**: Cleans text, extracts metadata, and performs NLP analysis
-3. **Load**: Stores structured data in SQLite and vector embeddings in ChromaDB
-4. **Analyze**: Generates comprehensive EDA with 13+ visualization types
-5. **Query**: Provides a RAG-powered API for semantic search and Q&A
+1. **Extracts** geopolitical news from RSS feeds (10 sources) and NewsAPI
+2. **Filters** articles using 60+ conflict-related keywords (Iran, Israel, war, nuclear, escalation, etc.)
+3. **Stores** articles in SQLite for structured queries and ChromaDB for semantic search
+4. **Analyzes** content using NLP techniques (sentiment, entity extraction, topic modeling)
+5. **Generates** comprehensive EDA visualizations and statistical reports
+6. **Provides** a RAG chatbot interface for querying news using natural language
 
-The system is specifically tuned for conflict-related content with custom keyword dictionaries, escalation scoring, and geopolitical actor tracking.
+The system is designed for researchers, journalists, and analysts tracking global conflict dynamics, escalation patterns, and geopolitical sentiment.
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DATA EXTRACTION LAYER                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  scraper/scraper.py                                                          │
+│  ├─ RSS_SOURCES: 10 news feeds (BBC, Al Jazeera, CNN, Fox, NYT, etc.)       │
+│  ├─ NewsAPI: Query-based article search                                      │
+│  ├─ 60+ conflict keywords for filtering                                      │
+│  └─ Deduplication via SQLite link checking                                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           DATABASE LAYER                                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  database/db.py                     │  database/vector_db.py                  │
+│  ├─ SQLite (Structured Storage)    │  ├─ ChromaDB (Semantic Search)          │
+│  │  └─ articles table               │  │  └─ news_articles collection        │
+│  └─ Full-text search + metadata     │  └─ Ollama embeddings (qwen3)           │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           ANALYSIS LAYER                                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  eda_code/eda.py (Exploratory Data Analysis)                                 │
+│  ├─ Actor mention extraction (15+ geopolitical entities)                     │
+│  ├─ Conflict theater classification (5 theaters)                             │
+│  ├─ Escalation scoring (weighted keyword analysis)                          │
+│  ├─ Sentiment analysis (hybrid lexicon + TextBlob)                          │
+│  └─ WW3 threat level calculation                                             │
+│                                                                              │
+│  eda_code/statistical_analysis.py (Inferential Statistics)                   │
+│  ├─ Chi-Square Test: China-USA mention independence                         │
+│  ├─ One-Way ANOVA: Sentiment across theaters                                │
+│  ├─ OLS Regression: Escalation ~ word_count + sentiment                    │
+│  └─ Zipf's Law verification                                                 │
+│                                                                              │
+│  eda_code/vector_eda.py (Semantic Theme Analysis)                           │
+│  └─ 7 geopolitical themes with semantic distance metrics                    │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           VISUALIZATION LAYER                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  eda_code/report_generator.py                                               │
+│  └─ Interactive HTML dashboard with 20+ charts (threat level, actors,      │
+│     sentiment, correlation matrices, regression plots)                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           RAG BACKEND (FastAPI)                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  api.py                                                                      │
+│  ├─ POST /api/chat: Query endpoint with semantic search                      │
+│  ├─ ChromaDB: Retrieves top-N relevant article chunks                       │
+│  └─ Ollama LLM (llama3.2:3b): Generates contextual answers                   │
+└─────────────────────────────────────────────────────────────────────────────┘
+                                    │
+                                    ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                           FRONTEND (Next.js)                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│  ragfrontend/                                                                │
+│  ├─ Chatbot.tsx: Query interface with source citations                      │
+│  ├─ SourceSidebar.tsx: Article references panel                             │
+│  └─ EdaSidebar.tsx: Statistics overview                                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## Features
 
-### Data Collection
-- **Multi-Source RSS Scraping**: BBC, Associated Press, Al Jazeera, Guardian, CNN, Fox News, New York Times, ABC News, Washington Post, Yahoo News
-- **NewsAPI Integration**: Query-based article fetching with custom geopolitical search terms
-- **Smart Filtering**: 60+ conflict-related keywords including escalation indicators, geographic hotspots, and military terminology
-- **Full-Text Extraction**: BeautifulSoup-powered content extraction from article pages
-- **Duplicate Prevention**: URL-based deduplication to avoid storing the same article twice
+### Data Extraction
+- **Multi-source scraping**: 10 RSS feeds + NewsAPI for comprehensive coverage
+- **Intelligent filtering**: 60+ conflict-specific keywords for relevance
+- **Deduplication**: SQLite-based URL tracking prevents duplicates
+- **Full article extraction**: BeautifulSoup-based content extraction with source-specific parsers
 
-### Storage & Embeddings
-- **SQLite Database**: Persistent storage for article metadata, content, and timestamps
-- **ChromaDB Vector Store**: Semantic embeddings using Ollama's `nomic-embed-text` / `qwen3-embedding` models
-- **Intelligent Chunking**: 500-character text chunks with sentence-aware splitting
+### Analysis Capabilities
+- **Actor Mention Tracking**: Frequency analysis for 15+ geopolitical entities (Israel, Iran, US, Russia, China, Hamas, Hezbollah, etc.)
+- **Conflict Theater Classification**: Articles categorized into 5 theaters (Middle East, Russia/Ukraine, Asia-Pacific, Global WW3, US Policy)
+- **Escalation Scoring**: Weighted keyword analysis with positive weights for threats (nuclear: +10, missile: +5) and negative weights for diplomacy (ceasefire: -3, peace talks: -4)
+- **Hybrid Sentiment Analysis**: Custom conflict-domain lexicon combined with TextBlob for domain-accurate sentiment
+- **N-gram Analysis**: Bigram and trigram extraction for phrase-level insights
+- **WW3 Threat Level**: Composite score combining escalation, nuclear mentions, and global conflict indicators
 
-### Analytics & Intelligence
-- **WW3 Threat Level Indicator**: Composite scoring based on nuclear keywords, escalation terms, sentiment, and missile mentions
-- **Conflict Theater Classification**: Automatic categorization (Middle East, Russia/Ukraine, Asia-Pacific, Global WW3, US Policy)
-- **Actor Co-Occurrence Analysis**: Heatmap showing which geopolitical actors appear together in articles
-- **Escalation Scoring**: Weighted keyword scoring with de-escalation term credits
-- **Sentiment Analysis**: TextBlob-based polarity scoring with trend tracking
-- **N-Gram Analysis**: Bigram and trigram extraction for phrase intelligence
-- **Publication Velocity**: Source activity tracking over time
+### Statistical Testing
+- **Chi-Square Test**: Verifies China-USA mentions are not independent in news coverage
+- **One-Way ANOVA**: Tests if sentiment differs significantly across conflict theaters
+- **OLS Regression**: Models escalation score as function of word count and sentiment
+- **Zipf's Law Verification**: Validates word frequency follows power law distribution
 
-### Visualization & Reporting
-- **Dark-Themed HTML Dashboard**: Auto-generated intelligence briefing with all metrics
-- **13+ Chart Types**: Bar charts, pie charts, heatmaps, trend lines, area charts
-- **Threat Level Gauge**: Visual composite score with color-coded severity zones
-
-### RAG API
-- **Semantic Search**: Query articles by meaning, not just keywords
-- **LLM Integration**: Local Ollama-powered question answering with source attribution
-- **Source Sidebar**: Displays matching articles with similarity distances
+### RAG Chatbot
+- **Semantic Search**: ChromaDB vector database with Ollama embeddings
+- **Local LLM**: llama3.2:3b for privacy-preserving inference
+- **Source Citations**: Every response includes links to source articles
+- **Context-aware**: Retrieves top-20 most relevant article chunks
 
 ---
 
-## System Architecture
+## Tech Stack
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│                          GEOPOLITICAL NEWS PIPELINE                              │
-├─────────────────────────────────────────────────────────────────────────────────┤
-│                                                                                  │
-│  ┌──────────────┐     ┌──────────────┐     ┌──────────────────────────────────┐ │
-│  │   RSS FEEDS  │     │   NewsAPI    │     │         KEYWORD FILTER           │ │
-│  │  (10 sources)│     │  (API calls) │     │  60+ conflict-related terms      │ │
-│  └──────┬───────┘     └──────┬───────┘     └─────────────┬────────────────────┘ │
-│         │                    │                           │                      │
-│         └────────────────────┼───────────────────────────┘                      │
-│                              ▼                                                  │
-│                    ┌─────────────────┐                                          │
-│                    │     SCRAPER     │                                          │
-│                    │  scraper.py     │                                          │
-│                    │  - Full-text    │                                          │
-│                    │  - Image URLs   │                                          │
-│                    │  - Deduplication│                                          │
-│                    └────────┬────────┘                                          │
-│                             │                                                   │
-│         ┌───────────────────┼───────────────────┐                               │
-│         ▼                   ▼                   ▼                               │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────┐                      │
-│  │   SQLITE    │    │  CHROMADB   │    │      EDA        │                      │
-│  │  news.db    │    │  Vectors    │    │   Analysis      │                      │
-│  │             │    │             │    │                 │                      │
-│  │ - Metadata  │    │ - Embeddings│    │ - Threat Level  │                      │
-│  │ - Content   │    │ - Semantic  │    │ - Sentiment     │                      │
-│  │ - Timestamps│    │   Search    │    │ - Escalation    │                      │
-│  └──────┬──────┘    └──────┬──────┘    │ - Actor Co-occur│                      │
-│         │                  │           └────────┬────────┘                      │
-│         │                  │                    │                               │
-│         └──────────────────┼────────────────────┘                               │
-│                            ▼                                                    │
-│                  ┌─────────────────┐                                            │
-│                  │  HTML DASHBOARD │                                            │
-│                  │  report.html    │                                            │
-│                  └─────────────────┘                                            │
-│                                                                                  │
-│  ┌────────────────────────────────────────────────────────────────────────────┐ │
-│  │                            RAG API LAYER                                    │ │
-│  │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────────────────┐ │ │
-│  │  │   FastAPI   │───▶│  ChromaDB   │───▶│    Ollama LLM (llama3.2:3b)     │ │ │
-│  │  │   api.py    │    │   Query     │    │    Semantic Q&A with Sources    │ │ │
-│  │  └─────────────┘    └─────────────┘    └─────────────────────────────────┘ │ │
-│  └────────────────────────────────────────────────────────────────────────────┘ │
-│                                                                                  │
-│  ┌────────────────────────────────────────────────────────────────────────────┐ │
-│  │                        FRONTEND LAYER (Next.js)                             │ │
-│  │  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────────────────┐ │ │
-│  │  │  Chat UI    │    │  Sources    │    │    EDA Report Sidebar           │ │ │
-│  │  │  Chatbot.tsx│    │  Sidebar    │    │    Embedded Dashboard View      │ │ │
-│  │  └─────────────┘    └─────────────┘    └─────────────────────────────────┘ │ │
-│  └────────────────────────────────────────────────────────────────────────────┘ │
-│                                                                                  │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
+| Layer | Technology |
+|-------|------------|
+| **Backend** | Python 3.14, FastAPI |
+| **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
+| **Databases** | SQLite (structured), ChromaDB (vector) |
+| **NLP/ML** | TextBlob, scikit-learn, spaCy |
+| **LLM/Embeddings** | Ollama (llama3.2:3b, qwen3-embedding:0.6B) |
+| **Visualization** | Matplotlib, Seaborn |
+| **Scraping** | BeautifulSoup, feedparser, requests |
 
 ---
 
@@ -141,63 +169,50 @@ The system is specifically tuned for conflict-related content with custom keywor
 
 ```
 Elective-Project-/
-│
-├── main.py                      # Central orchestrator - runs complete pipeline
-├── api.py                       # FastAPI RAG endpoint with semantic search
-├── utils.py                     # Logging decorators and utilities
+├── main.py                      # Main pipeline orchestrator
+├── api.py                       # FastAPI RAG backend
+├── utils.py                     # Logging and timing decorators
 ├── requirements.txt             # Python dependencies
-├── pipeline.log                 # Execution logs (auto-generated)
-│
-├── scraper/
-│   └── scraper.py               # RSS & NewsAPI fetching, BeautifulSoup parsing
+├── pipeline.log                 # Execution logs
 │
 ├── database/
-│   ├── db.py                    # SQLite CRUD operations and initialization
-│   └── vector_db.py             # ChromaDB embeddings with Ollama integration
+│   ├── db.py                    # SQLite operations (init, save, fetch)
+│   └── vector_db.py             # ChromaDB operations (embed, store)
+│
+├── scraper/
+│   └── scraper.py               # RSS + NewsAPI scraping with filtering
 │
 ├── eda_code/
-│   ├── eda.py                   # Comprehensive EDA with 13 chart types
-│   ├── vector_eda.py            # Semantic theme analysis via vector queries
-│   └── report_generator.py      # HTML dashboard compilation
+│   ├── eda.py                   # Exploratory data analysis (13 charts)
+│   ├── statistical_analysis.py  # Hypothesis testing (5 charts)
+│   ├── vector_eda.py            # Semantic theme analysis (2 charts)
+│   └── report_generator.py      # HTML dashboard generator
 │
-├── scripts/
-│   ├── 01_eda.py                # Standalone EDA script
-│   ├── 02_visualizations.py     # Advanced visualizations
-│   └── 03_country_analysis.py   # Country-pair tension analysis
+├── ragfrontend/                 # Next.js frontend
+│   ├── app/
+│   │   ├── page.tsx             # Main page layout
+│   │   ├── layout.tsx           # Root layout
+│   │   └── globals.css          # Global styles
+│   └── components/
+│       ├── Chatbot.tsx          # Chat interface
+│       ├── SourceSidebar.tsx    # Article sources panel
+│       └── EdaSidebar.tsx       # Statistics panel
+│
+├── data/
+│   └── raw/
+│       └── news_articles.csv    # Raw scraped articles backup
 │
 ├── sqlite_databases/
-│   └── news.db                  # SQLite database (auto-generated)
+│   └── news.db                  # SQLite database
 │
-├── chromadb/                    # Vector database (auto-generated)
+├── chromadb/                    # ChromaDB vector store
+│   └── chroma.sqlite3
 │
-├── eda_output/                  # Analysis outputs (auto-generated)
-│   ├── report.html              # Final intelligence dashboard
-│   ├── top_sources.png          # Source distribution chart
-│   ├── top_keywords.png         # Keyword frequency chart
-│   ├── article_length_dist.png  # Article length histogram
-│   ├── articles_over_time.png   # Timeline visualization
-│   ├── country_actor_mentions.png
-│   ├── conflict_theaters.png    # Theater pie chart
-│   ├── actor_cooccurrence_heatmap.png
-│   ├── escalation_trend.png     # Escalation score over time
-│   ├── sentiment_analysis.png   # Sentiment by source and time
-│   ├── source_velocity.png      # Stacked area chart
-│   ├── weekly_heatmap.png       # Day × Week heatmap
-│   └── threat_level.png         # WW3 threat gauge
-│
-├── ragfrontend/                 # Next.js frontend (optional)
-│   ├── app/
-│   │   ├── page.tsx             # Main chat interface
-│   │   ├── layout.tsx           # App layout
-│   │   └── globals.css          # Styles
-│   ├── components/
-│   │   ├── Chatbot.tsx          # RAG chat component
-│   │   ├── SourceSidebar.tsx    # Article sources panel
-│   │   └── EdaSidebar.tsx       # Dashboard embed
-│   └── package.json
-│
-└── piyush/                      # Legacy/experimental directory
-    └── venv/                    # Python virtual environment
+└── eda_output/                  # Generated outputs
+    ├── report.html              # Interactive HTML dashboard
+    ├── threat_level.png         # WW3 threat visualization
+    ├── top_sources.png          # Source distribution
+    └── ... (18 other charts)
 ```
 
 ---
@@ -205,237 +220,113 @@ Elective-Project-/
 ## Installation
 
 ### Prerequisites
+- Python 3.10+ (tested on 3.14)
+- Node.js 18+ (for frontend)
+- Ollama (for LLM inference)
 
-- **Python 3.10+**
-- **Ollama** (for local LLM and embeddings)
-- **Node.js 18+** (optional, for frontend)
-
-### Step 1: Clone the Repository
-
+### 1. Clone the Repository
 ```bash
-git clone <repository-url>
-cd Elective-Project-
+git clone https://github.com/your-username/elective-project.git
+cd elective-project
 ```
 
-### Step 2: Install Python Dependencies
-
+### 2. Install Python Dependencies
 ```bash
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Dependencies include:**
-```
-requests          # HTTP client for API calls
-beautifulsoup4    # HTML parsing
-feedparser        # RSS feed parsing
-pandas            # Data manipulation
-matplotlib        # Visualization
-seaborn           # Statistical visualization
-chromadb          # Vector database
-ollama            # Local LLM integration
-fastapi           # API framework
-uvicorn           # ASGI server
-textblob          # Sentiment analysis
-scikit-learn      # N-gram extraction
-```
-
-### Step 3: Install spaCy Model (optional, for NER)
-
+### 3. Install Ollama and Download Models
 ```bash
-python -m spacy download en_core_web_sm
-```
-
-### Step 4: Install and Configure Ollama
-
-1. **Download Ollama**: Visit [ollama.com](https://ollama.com) and install
-
-2. **Pull Required Models**:
-```bash
-# Embedding model for ChromaDB
-ollama pull nomic-embed-text
-
-# Alternative embedding model (used in vector_db.py)
-ollama pull qwen3-embedding:0.6B
-
-# LLM for RAG Q&A
+# Install Ollama (follow instructions at https://ollama.ai)
 ollama pull llama3.2:3b
+ollama pull qwen3-embedding:0.6B
+# Alternative embedding model:
+ollama pull nomic-embed-text
 ```
 
-3. **Start Ollama Service**:
-```bash
-ollama serve
-```
-
-### Step 5: Set Environment Variables (Optional)
-
-```bash
-# Override default NewsAPI key
-export NEWSAPI_KEY="your-api-key-here"
-```
-
-### Step 6: Install Frontend Dependencies (Optional)
-
+### 4. Install Frontend Dependencies
 ```bash
 cd ragfrontend
 npm install
+cd ..
 ```
 
----
-
-## Configuration
-
-### Keyword Configuration
-
-The scraper uses two keyword sets defined in `scraper/scraper.py`:
-
-**Primary Keywords (RSS Filtering):**
-```python
-KEYWORDS = [
-    "war", "iran", "israel", "united states", "us", "missile", "attack",
-    "military", "retaliation", "conflict", "gaza", "tehran", "hezbollah",
-    "world war 3", "ww3", "nuclear", "escalation", "world war iii",
-    "global conflict", "third world war", "thermonuclear", "armageddon",
-    "doomsday", "nato article 5", "mutual assured destruction", ...
-]
-```
-
-**Extended Keywords (NewsAPI Queries):**
-Includes additional terms for targeted API searches.
-
-### Conflict Theater Classification
-
-Defined in `eda_code/eda.py`:
-
-```python
-CONFLICT_THEATERS = {
-    "Middle East": ["israel", "iran", "gaza", "hezbollah", ...],
-    "Russia/Ukraine": ["russia", "ukraine", "putin", "zelensky", ...],
-    "Asia-Pacific": ["china", "taiwan", "north korea", ...],
-    "Global WW3": ["world war", "ww3", "nuclear", "armageddon", ...],
-    "US Policy/Sanctions": ["pentagon", "white house", "us sanction", ...]
-}
-```
-
-### Escalation Weights
-
-Keywords are weighted for escalation scoring:
-
-```python
-ESCALATION_WEIGHTS = {
-    "nuclear": 10, "thermonuclear": 10, "world war 3": 10, "ww3": 10,
-    "missile": 5, "war": 5, "strike": 5, "drone": 4,
-    "ceasefire": -3, "peace talks": -4, "diplomacy": -3  # De-escalation
-}
+### 5. Configure Environment (Optional)
+```bash
+# Set NewsAPI key (optional - default key provided)
+export NEWSAPI_KEY="your-api-key-here"
 ```
 
 ---
 
 ## Usage
 
-### Run the Complete Pipeline
+### Running the ETL Pipeline
 
 ```bash
 python main.py
 ```
 
-This executes the full ETL process:
-1. Initialize SQLite database
-2. Scrape articles from RSS feeds and NewsAPI
-3. Save articles to SQLite
-4. Generate embeddings in ChromaDB
-5. Run EDA analysis
-6. Generate HTML dashboard
+This executes the complete pipeline:
 
-### Run Specific Components
+1. **Initialize SQLite database** - Creates `sqlite_databases/news.db`
+2. **Scrape RSS feeds** - Fetches from 10 configured sources
+3. **Scrape NewsAPI** - Queries 12 conflict-related terms
+4. **Save articles** - Deduplicates and stores in SQLite
+5. **Run EDA** - Generates 13 exploratory charts
+6. **Run Statistical Analysis** - Performs hypothesis tests (5 charts)
+7. **Embed to ChromaDB** - Creates semantic search index
+8. **Run Vector EDA** - Semantic theme analysis (2 charts)
+9. **Generate Report** - Builds `eda_output/report.html`
 
-```python
-# Only run EDA on existing data
-from database.db import get_all_articles
-from eda_code.eda import run_eda
+### Starting the RAG Backend
 
-df = get_all_articles()
-stats = run_eda(df)
-```
-
-```python
-# Only update vector database
-from database.db import get_all_articles
-from database.vector_db import store_articles_in_vector_db
-
-df = get_all_articles()
-store_articles_in_vector_db(df)
-```
-
-### Start the RAG API Server
-
-```bash
-python api.py
-```
-
-Or with uvicorn:
 ```bash
 uvicorn api:app --host 0.0.0.0 --port 8000
 ```
 
-API will be available at `http://localhost:8000`
+The API will be available at `http://localhost:8000`
 
-### Start the Frontend (Optional)
+### Starting the Frontend
 
 ```bash
 cd ragfrontend
 npm run dev
 ```
 
-Frontend will be available at `http://localhost:3000`
+Access the chatbot at `http://localhost:3000`
 
 ---
 
-## Component Documentation
+## Components Deep Dive
 
-### 1. Data Extraction Layer (Scraper)
+### Data Extraction (Scraper)
 
-**File**: `scraper/scraper.py`
+The scraper module (`scraper/scraper.py`) implements:
 
-#### RSS Feed Sources
+**RSS Sources (10 feeds)**:
+- BBC, Associated Press, Al Jazeera, Guardian
+- CNN, Fox News, NYT, ABC News
+- Washington Post, Yahoo News
 
-| Source | Feed URL |
-|--------|----------|
-| BBC | `feeds.bbci.co.uk/news/rss.xml` |
-| Associated Press | `feedx.net/rss/ap.xml` |
-| Al Jazeera | `aljazeera.com/xml/rss/all.xml` |
-| Guardian | `theguardian.com/world/rss` |
-| CNN | `rss.cnn.com/rss/edition_world.rss` |
-| Fox News | `moxie.foxnews.com/google-publisher/world.xml` |
-| New York Times | `rss.nytimes.com/services/xml/rss/nyt/HomePage.xml` |
-| ABC News | `abcnews.go.com/abcnews/topstories` |
-| Washington Post | `feeds.washingtonpost.com/rss/national` |
-| Yahoo News | `news.yahoo.com/rss/topstories` |
+**Filtering Logic**:
+- 60+ conflict keywords including: `war`, `iran`, `israel`, `nuclear`, `hezbollah`, `hamas`, `missile`, `escalation`, `ww3`, `armageddon`
+- Articles must match at least one keyword in title or content
+- Source-specific HTML parsers for full article extraction
 
-#### Functions
-
-| Function | Description |
-|----------|-------------|
-| `fetch_rss_news()` | Iterates all RSS sources, extracts 15 latest per source |
-| `fetch_newsapi_news(api_key)` | Queries NewsAPI with conflict keywords |
-| `scrape_all_sources(api_key)` | Master orchestrator for all sources |
-| `is_conflict_related(text)` | Keyword filtering function |
-| `extract_full_article_*(url)` | Site-specific BeautifulSoup extractors |
-
-#### Scraping Process
-
-```
-RSS Feed → Parse Entries → Check Duplicate (URL) → Extract Full Text
-    ↓
-Keyword Filter → Article Dict → Return List
+**Deduplication**:
+```python
+def is_article_saved(url: str) -> bool:
+    # Checks if URL already exists in SQLite
+    cursor.execute("SELECT 1 FROM articles WHERE link = ?", (url,))
+    return cursor.fetchone() is not None
 ```
 
----
+### Database Layer
 
-### 2. Database Layer
-
-#### SQLite Storage (`database/db.py`)
-
-**Schema**:
+**SQLite (`database/db.py`)**:
 ```sql
 CREATE TABLE articles (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -443,227 +334,146 @@ CREATE TABLE articles (
     title TEXT,
     content TEXT,
     published_at TEXT,
-    link TEXT UNIQUE,           -- Deduplication key
+    link TEXT UNIQUE,
     scraped_at TEXT,
     img_link TEXT
 );
 ```
 
-**Functions**:
-| Function | Description |
-|----------|-------------|
-| `init_db()` | Creates database and tables |
-| `save_articles(articles)` | Inserts articles with deduplication |
-| `get_all_articles()` | Returns all articles as DataFrame |
-| `is_article_saved(url)` | Checks if URL already exists |
+**ChromaDB (`database/vector_db.py`)**:
+- Embedding model: `qwen3-embedding:0.6B`
+- Chunk size: 500 characters with sentence-aware splitting
+- Metadata: `original_article_id`, `source`, `url`, `published_at`
 
-#### Vector Database (`database/vector_db.py`)
+### EDA & Statistical Analysis
 
-**Chunking Strategy**:
-- Maximum chunk size: 500 characters
-- Sentence-aware splitting (splits on ". ")
-- Hard limit enforcement for oversized sentences
-
-**Embedding Process**:
-```python
-ollama_ef = embedding_functions.OllamaEmbeddingFunction(
-    url="http://localhost:11434/api/embeddings",
-    model_name="qwen3-embedding:0.6B"
-)
-```
-
-**Metadata Stored with Each Chunk**:
-```python
-{
-    "original_article_id": article_id,  # Links back to SQLite
-    "source": source_name,
-    "url": article_url,
-    "published_at": timestamp
-}
-```
-
----
-
-### 3. EDA & Analytics Layer
-
-#### Main EDA (`eda_code/eda.py`)
-
-**Generates 13 Charts:**
-
-| Chart | File | Description |
-|-------|------|-------------|
-| 1. Top Sources | `top_sources.png` | Horizontal bar of article counts by source |
-| 2. Keyword Frequency | `top_keywords.png` | Conflict keyword occurrence counts |
-| 3. Article Timeline | `articles_over_time.png` | Daily publication counts |
-| 4. Length Distribution | `article_length_dist.png` | Word count histogram |
-| 5. Actor Mentions | `country_actor_mentions.png` | Geopolitical entity frequency |
-| 6. Conflict Theaters | `conflict_theaters.png` | Donut chart of theater distribution |
-| 7. Actor Co-occurrence | `actor_cooccurrence_heatmap.png` | Which actors appear together |
-| 8. Escalation Trend | `escalation_trend.png` | Score distribution + rolling average |
-| 9. Sentiment Analysis | `sentiment_analysis.png` | By source + over time |
-| 10. Source Velocity | `source_velocity.png` | Stacked area of daily volume |
-| 11. Weekly Heatmap | `weekly_heatmap.png` | Day-of-week × calendar week |
-| 12. N-grams | `top_ngrams.png` | Bigrams and trigrams |
-| 13. Threat Level | `threat_level.png` | Composite WW3 gauge |
-
-**Key Metrics Computed**:
-- `total_articles`: Count of articles in database
-- `top_sources`: Article distribution by source
-- `mean_words`, `median_words`: Article length statistics
-- `avg_sentiment`: Mean TextBlob polarity
-- `sentiment_distribution`: {Positive, Neutral, Negative} percentages
-- `avg_escalation_score`: Weighted keyword score (0-100)
-- `ww3_threat_level`: Composite threat indicator (0-100)
-- `dominant_theater`: Most common conflict region
-- `actor_mentions`: Entity frequency counts
-- `top_bigrams`, `top_trigrams`: Phrase intelligence
-
-#### Vector EDA (`eda_code/vector_eda.py`)
-
-**Semantic Themes Queried**:
-```python
-THEMES = {
-    "WW3 / Escalation": "world war 3 ww3 nuclear escalation...",
-    "US-Israel": "us israel united states biden trump...",
-    "Israel-Iran": "israel iran attack strike tehran...",
-    "Iran-US": "iran us america sanction...",
-    "Middle East Conflict": "gaza west bank beirut damascus...",
-    "Europe/Russia Context": "russia ukraine putin moscow...",
-    "Global Economy & Oil": "oil price brent crude opec..."
-}
-```
-
-**Output**:
-- Theme article counts
-- Average semantic distance per theme (lower = more relevant)
-
-#### Report Generator (`eda_code/report_generator.py`)
-
-Generates a dark-themed, responsive HTML dashboard with:
-- Threat level banner with color-coded severity
-- Metrics cards (article count, sources, sentiment, etc.)
-- All 13 charts embedded
-- Tables for top sources, actors, theaters, n-grams
-- Vector analysis section
-
----
-
-### 4. RAG API Layer
-
-**File**: `api.py`
-
-#### Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/api/chat` | RAG query with source attribution |
-| GET | `/report/` | Static dashboard serving |
-
-#### Chat Request/Response
-
-**Request**:
-```json
-{
-  "query": "What is the latest on Iran-Israel tensions?"
-}
-```
-
-**Response**:
-```json
-{
-  "answer": "Based on the articles...",
-  "sources": [
-    {
-      "id": 42,
-      "title": "Israel Strikes Iran...",
-      "source": "BBC",
-      "url": "https://...",
-      "img_link": "https://...",
-      "published_at": "2024-01-15",
-      "content_snippet": "Full text excerpt...",
-      "similarity_distance": 0.23
-    }
-  ]
-}
-```
-
-#### RAG Flow
-
-```
-User Query → Ollama Embedding → ChromaDB Query → Top 60 Chunks
-    ↓
-Deduplicate by article_id → Top 20 Unique Articles
-    ↓
-Fetch Full Article Info from SQLite
-    ↓
-Build Context from Chunks → LLM Prompt → Response + Sources
-```
-
-#### LLM Prompt Template
+**Key Analysis Functions**:
 
 ```python
-prompt = f"""You are a geopolitical intelligence analyst assistant.
+def compute_escalation_score(text):
+    """Weighted sum of escalation keywords; clamped [0, 100]."""
+    # Nuclear/WW3 keywords: +10
+    # Missile/strike keywords: +5
+    # Ceasefire/diplomacy: -3 to -4
+
+def classify_theater(text):
+    """Assign dominant conflict theater."""
+    # Middle East: israel, iran, gaza, hezbollah...
+    # Russia/Ukraine: russia, ukraine, putin, zelensky...
+    # Asia-Pacific: china, taiwan, north korea...
+```
+
+**Conflict-Domain Sentiment Lexicon**:
+- Custom positive/negative word lists for conflict journalism
+- Combined with TextBlob for hybrid sentiment scoring
+- Handles domain-specific terms like `airstrike` (negative), `ceasefire` (positive)
+
+### RAG Backend
+
+**Query Flow**:
+```
+User Query → Embed Query → ChromaDB Search → Retrieve Top-20 Chunks
+    → Fetch Article Metadata from SQLite → LLM Generation → Response + Sources
+```
+
+**LLM Prompt Template**:
+```
+You are a geopolitical intelligence analyst assistant.
 Use the following retrieved news article context to answer the user's question.
-If the answer isn't firmly in the context, do your best based on the context provided,
-but acknowledge limitations if necessary. Do not hallucinate facts.
+If the answer isn't firmly in the context, acknowledge limitations.
+Do not hallucinate facts.
 
-Context:
-{context_chunks}
-
+Context: {article_chunks_joined}
 User Question: {query}
-
-Answer:"""
 ```
 
----
+### Frontend Interface
 
-### 5. Frontend Layer
+**Three-Column Layout**:
+- **Left (25%)**: Source sidebar showing article citations
+- **Center (50%)**: Chat interface with message history
+- **Right (25%)**: EDA statistics panel
 
-**Directory**: `ragfrontend/`
-
-A Next.js-based web interface for the RAG system.
-
-#### Components
-
-| Component | Description |
-|-----------|-------------|
-| `Chatbot.tsx` | Main chat interface with message history |
-| `SourceSidebar.tsx` | Displays matching articles with snippets |
-| `EdaSidebar.tsx` | Embeds the HTML dashboard |
-
-#### Features
-- Real-time chat with the RAG API
-- Source article cards with images
-- Expandable article snippets
-- Embedded EDA dashboard
+**Features**:
+- Real-time chat with loading indicators
+- Source article previews with similarity scores
+- Responsive dark theme UI
 
 ---
 
-## Output Artifacts
+## Analysis Output
 
-### SQLite Database (`sqlite_databases/news.db`)
+The pipeline generates 20+ visualizations in `eda_output/`:
 
-Contains all scraped articles with metadata:
-- Article content and titles
-- Source attribution
-- Publication timestamps
-- Image URLs
-- Duplicate prevention via unique link constraint
+### Exploratory Analysis (13 charts)
+| Chart | Description |
+|-------|-------------|
+| `top_sources.png` | Article count by news source |
+| `top_keywords.png` | Most frequent conflict keywords |
+| `articles_over_time.png` | Timeline of article publication |
+| `article_length_dist.png` | Content length distribution |
+| `country_actor_mentions.png` | Geopolitical actor frequency |
+| `conflict_theaters.png` | Theater classification breakdown |
+| `actor_cooccurrence_heatmap.png` | Actor co-mention patterns |
+| `escalation_trend.png` | Escalation score over time |
+| `sentiment_analysis.png` | Sentiment distribution |
+| `source_velocity.png` | Publishing frequency by source |
+| `top_ngrams.png` | Bigram/trigram analysis |
+| `threat_level.png` | WW3 threat composite score |
+| `weekly_heatmap.png` | Publishing patterns by day/hour |
 
-### ChromaDB Vector Store (`chromadb/`)
+### Statistical Analysis (5 charts)
+| Chart | Description |
+|-------|-------------|
+| `stats_distributions.png` | Skewness and kurtosis |
+| `stats_correlation_matrices.png` | Pearson correlation & covariance |
+| `stats_zipf_distribution.png` | Zipf's Law verification |
+| `stats_ols_regression.png` | Escalation regression model |
+| `stats_hypothesis_tests.png` | Chi-Square & ANOVA results |
 
-Contains embedded text chunks:
-- 500-character chunks with sentence boundaries
-- Ollama embeddings (`qwen3-embedding:0.6B`)
-- Metadata linking back to SQLite articles
+### Vector Analysis (2 charts)
+| Chart | Description |
+|-------|-------------|
+| `vector_theme_counts.png` | Semantic theme distribution |
+| `vector_theme_distances.png` | Theme coherence analysis |
 
-### HTML Dashboard (`eda_output/report.html`)
+### HTML Report
+`report.html` combines all charts into an interactive dark-themed dashboard.
 
-A self-contained intelligence briefing including:
-- All visualizations
-- Summary statistics
-- Trend analysis
-- Threat assessment
+---
+
+## Configuration
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `NEWSAPI_KEY` | NewsAPI API key | Built-in key (rate-limited) |
+
+### Configurable Constants
+
+**RSS Sources** (`scraper/scraper.py`):
+```python
+RSS_SOURCES = {
+    "BBC": "https://feeds.bbci.co.uk/news/rss.xml",
+    "Al_Jazeera": "https://www.aljazeera.com/xml/rss/all.xml",
+    # ... add more sources
+}
+```
+
+**Conflict Keywords** (`scraper/scraper.py`):
+```python
+KEYWORDS = [
+    "war", "iran", "israel", "nuclear", "missile",
+    # ... add domain-specific keywords
+]
+```
+
+**LLM Models** (`api.py`):
+```python
+LLM_MODEL = "llama3.2:3b"
+EMBEDDING_MODEL = "nomic-embed-text"  # or "qwen3-embedding:0.6B"
+```
 
 ---
 
@@ -671,134 +481,84 @@ A self-contained intelligence briefing including:
 
 ### POST /api/chat
 
-Submit a natural language query and receive an AI-generated response with sources.
+Query the news database using natural language.
 
-**Request Body**:
+**Request**:
 ```json
 {
-  "query": "string"
+  "query": "What are the latest developments in the Middle East?"
 }
 ```
 
 **Response**:
 ```json
 {
-  "answer": "string",
+  "answer": "Based on the retrieved articles, recent developments include...",
   "sources": [
     {
-      "id": "integer",
-      "title": "string",
-      "source": "string",
-      "url": "string | null",
-      "img_link": "string | null",
-      "published_at": "string | null",
-      "content_snippet": "string | null",
-      "similarity_distance": "float | null"
+      "id": 42,
+      "title": "Israel-Iran Escalation Continues",
+      "source": "BBC",
+      "url": "https://...",
+      "img_link": "https://...",
+      "published_at": "2024-01-15T10:30:00Z",
+      "content_snippet": "Iran has launched...",
+      "similarity_distance": 0.23
     }
   ]
 }
 ```
 
-**Error Responses**:
-- `500`: ChromaDB not found (run pipeline first)
-- `500`: Ollama connection error
+### GET /report
 
-### GET /report/
-
-Serves the static HTML dashboard.
+Access the EDA HTML dashboard.
 
 ---
 
 ## Dependencies
 
-### Python Packages
-
+### Python (requirements.txt)
 ```
-requests>=2.28.0
-beautifulsoup4>=4.11.0
-feedparser>=6.0.0
-pandas>=1.5.0
-matplotlib>=3.6.0
-seaborn>=0.12.0
-chromadb>=0.4.0
-ollama>=0.1.0
-fastapi>=0.100.0
-uvicorn>=0.23.0
-textblob>=0.17.0
-scikit-learn>=1.2.0
-numpy>=1.24.0
+requests          # HTTP requests
+beautifulsoup4    # HTML parsing
+feedparser        # RSS feed parsing
+pandas            # Data manipulation
+matplotlib        # Visualization
+seaborn           # Statistical visualization
+chromadb          # Vector database
+ollama            # LLM interface
+fastapi           # Web framework
+uvicorn           # ASGI server
 ```
 
-### External Services
-
-| Service | Purpose | Setup |
-|---------|---------|-------|
-| Ollama | Local LLM & embeddings | `ollama serve` |
-| NewsAPI | Optional news source | API key from newsapi.org |
-
----
-
-## Troubleshooting
-
-### Common Issues
-
-**1. ChromaDB Connection Error**
+### Additional Requirements
+```bash
+# spaCy NLP model (optional - for advanced NLP)
+python -m spacy download en_core_web_sm
 ```
-Error: Could not connect to ChromaDB
-```
-- Ensure the pipeline has been run at least once to create embeddings
-- Check that `chromadb/` directory exists
 
-**2. Ollama Model Not Found**
-```
-Error: model 'nomic-embed-text' not found
-```
-- Run: `ollama pull nomic-embed-text`
-- Run: `ollama pull qwen3-embedding:0.6B`
-- Run: `ollama pull llama3.2:3b`
-
-**3. Empty Dashboard**
-- Check that `sqlite_databases/news.db` contains articles
-- Verify EDA output directory has PNG files
-- Review `pipeline.log` for errors
-
-**4. RSS Feed Timeouts**
-- Some feeds may be temporarily unavailable
-- The scraper handles errors gracefully and continues
-
-**5. NewsAPI Rate Limits**
-- Free tier: 100 requests/day
-- Set `NEWSAPI_KEY` environment variable or use default key
-
-### Logging
-
-All pipeline operations are logged to `pipeline.log`:
-```
-2024-01-15 10:30:00 - PipelineLogger - INFO - Starting execution of 'scrape_all_sources'
-2024-01-15 10:30:05 - PipelineLogger - INFO - Finished execution of 'scrape_all_sources' in 5.2341 seconds.
+### Frontend (package.json)
+```json
+{
+  "next": "16.1.6",
+  "react": "19.2.3",
+  "react-dom": "19.2.3",
+  "tailwindcss": "^4",
+  "typescript": "^5"
+}
 ```
 
 ---
 
 ## License
 
-This project is for educational and research purposes.
-
----
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
+This project is for educational purposes. News content scraped from RSS feeds remains property of respective publishers.
 
 ---
 
 ## Acknowledgments
 
-- **NewsAPI** for API access to global news sources
-- **Ollama** for local LLM and embedding capabilities
-- **ChromaDB** for vector storage
-- **TextBlob** for sentiment analysis
-- **scikit-learn** for NLP utilities
+- News sources: BBC, Al Jazeera, CNN, Fox News, NYT, Guardian, AP, ABC, Washington Post, Yahoo News
+- LLM inference: [Ollama](https://ollama.ai)
+- Vector database: [ChromaDB](https://www.trychroma.com)
+- Frontend framework: [Next.js](https://nextjs.org)
