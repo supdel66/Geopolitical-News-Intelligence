@@ -8,7 +8,7 @@ _CHART = lambda name: f'<img src="{name}" alt="{name}" onerror="this.style.displ
 
 
 @timer_logger
-def generate_html_report(sqlite_stats, vector_stats):
+def generate_html_report(sqlite_stats, vector_stats, statistical_stats=None):
     """Generates a dark-themed HTML intelligence dashboard for all EDA outputs."""
     if not os.path.exists(EDA_DIR):
         os.makedirs(EDA_DIR)
@@ -33,6 +33,14 @@ def generate_html_report(sqlite_stats, vector_stats):
     # Vector stats
     theme_counts    = (vector_stats or {}).get("theme_counts", {})
     theme_dists     = (vector_stats or {}).get("theme_distances", {})
+
+    # Statistical analysis stats
+    st              = statistical_stats or {}
+    desc_stats      = st.get("descriptive", {})
+    ols             = st.get("ols_regression", {})
+    hyp             = st.get("hypothesis_tests", {})
+    chi_res         = hyp.get("chi_square", {})
+    anova_res       = hyp.get("anova", {})
 
     # ── Dynamic threat colour
     if threat_level < 25:   threat_color = "#3fb950"
@@ -86,6 +94,46 @@ def generate_html_report(sqlite_stats, vector_stats):
         f"<td>{theme_dists.get(theme, 0):.4f}</td></tr>"
         for theme in theme_counts
     )
+
+    # ── Statistical analysis — descriptive table
+    def _fmt(val, decimals=4):
+        try:
+            return f"{float(val):.{decimals}f}"
+        except Exception:
+            return str(val)
+
+    desc_rows = "".join(
+        f"<tr>"
+        f"<td>{col.replace('_', ' ').title()}</td>"
+        f"<td>{_fmt(d.get('n', 0), 0)}</td>"
+        f"<td>{_fmt(d.get('mean', 0))}</td>"
+        f"<td>{_fmt(d.get('median', 0))}</td>"
+        f"<td>{_fmt(d.get('std', 0))}</td>"
+        f"<td>{_fmt(d.get('skewness', 0))}</td>"
+        f"<td>{_fmt(d.get('excess_kurtosis', 0))}</td>"
+        f"</tr>"
+        for col, d in desc_stats.items()
+    ) if desc_stats else '<tr><td colspan="7" style="color:var(--muted)">Stats not computed</td></tr>'
+
+    def _sig_badge(p):
+        if p < 0.001:
+            return '<span style="color:#ff4444;font-weight:700">★★★ p&lt;0.001</span>'
+        if p < 0.01:
+            return '<span style="color:#ff4444;font-weight:700">★★ p&lt;0.01</span>'
+        if p < 0.05:
+            return '<span style="color:#f0883e;font-weight:700">★ p&lt;0.05</span>'
+        return '<span style="color:#3fb950">ns  p≥0.05</span>'
+
+    chi_p    = chi_res.get("p_value", 1.0)
+    anova_p  = anova_res.get("p_value", 1.0)
+
+    ols_r2        = _fmt(ols.get("r_squared", 0))
+    ols_adj_r2    = _fmt(ols.get("adj_r_squared", 0))
+    ols_f         = _fmt(ols.get("f_statistic", 0), 3)
+    ols_fp        = _fmt(ols.get("f_p_value", 1), 4)
+    ols_wc_coef   = _fmt(ols.get("word_count_coef", 0), 6)
+    ols_sent_coef = _fmt(ols.get("sentiment_coef", 0), 4)
+    ols_n         = ols.get("n_obs", "N/A")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -329,7 +377,9 @@ def generate_html_report(sqlite_stats, vector_stats):
 <div class="grid-full card">
   <h3>Sentiment Analysis — By Source &amp; Over Time</h3>
   <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
-    TextBlob polarity: −1 (very negative) → +1 (very positive).
+    Hybrid conflict-domain sentiment scorer: primary score from a curated geopolitical lexicon
+    (conflict words weighted −1→−5; ceasefire/peace +2→+5), blended 70:30 with TextBlob.
+    Polarity: −1 (strongly negative) → +1 (strongly positive).
     Left: Median polarity per source. Right: Daily rolling sentiment trend.
     Overall avg: <b>{avg_sent:+.3f}</b>
   </p>
@@ -384,8 +434,100 @@ def generate_html_report(sqlite_stats, vector_stats):
   </div>
 </div>
 
-<!-- ═══ SECTION 6 — CHROMADB SEMANTIC ANALYSIS ═══ -->
-<h2>Section 6 — Semantic Vector Analysis  (ChromaDB + Ollama Embeddings)</h2>
+<!-- ═══ SECTION 6 — STATISTICAL ANALYSIS ═══ -->
+<h2>Section 6 — Statistical Analysis  (Descriptive + Inferential)</h2>
+<p style="color:var(--muted); font-size:12px; margin-bottom:14px;">
+  Rigorous statistical analysis using <code>scipy.stats</code>, <code>statsmodels</code>, and <code>pandas</code>.
+  Verifies two key hypotheses about the conflict news corpus.
+</p>
+
+<!-- Descriptive stats table -->
+<div class="grid-full card">
+  <h3>1A — Descriptive Statistics  (Skewness &amp; Excess Kurtosis)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Excess kurtosis &gt; 0 = leptokurtic (heavy tails); &lt; 0 = platykurtic.
+    Skewness &gt; 0 = right-tailed; &lt; 0 = left-tailed.
+  </p>
+  {_CHART("stats_distributions.png")}
+  <table style="margin-top:14px;">
+    <tr>
+      <th>Variable</th><th>N</th><th>Mean</th><th>Median</th>
+      <th>Std Dev</th><th>Skewness</th><th>Excess Kurtosis</th>
+    </tr>
+    {desc_rows}
+  </table>
+</div>
+
+<!-- Correlation / Covariance -->
+<div class="grid-full card">
+  <h3>1B — Pearson Correlation &amp; Covariance Matrices</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Pearson r measures linear dependency between numeric variables.
+    Covariance captures the raw joint variability (scale-dependent).
+  </p>
+  {_CHART("stats_correlation_matrices.png")}
+</div>
+
+<!-- Zipf's Law -->
+<div class="grid-full card">
+  <h3>1C — Zipf's Law  (Global Keyword Frequency Distribution)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Natural language corpora follow Zipf's law: frequency ∝ rank<sup>−1</sup>.
+    A fitted slope near −1.0 on the log-log plot confirms this corpus obeys the power law,
+    validating that the text is representative natural language rather than fabricated or
+    heavily templated content.
+  </p>
+  {_CHART("stats_zipf_distribution.png")}
+</div>
+
+<!-- OLS Regression -->
+<div class="grid-full card">
+  <h3>1D — OLS Regression  (Escalation Score ~ Word Count + Sentiment)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Tests whether article length and negativity jointly predict escalation intensity.
+    R² = <b>{ols_r2}</b>  |  Adj R² = <b>{ols_adj_r2}</b>  |
+    F = <b>{ols_f}</b>  (p = {ols_fp})  |  N = {ols_n}
+  </p>
+  {_CHART("stats_ols_regression.png")}
+  <table style="margin-top:12px; max-width:500px;">
+    <tr><th>Term</th><th>Coefficient</th><th>Interpretation</th></tr>
+    <tr><td>Word Count</td><td>{ols_wc_coef}</td>
+        <td>Change in escalation per additional word</td></tr>
+    <tr><td>Sentiment Polarity</td><td>{ols_sent_coef}</td>
+        <td>More negative sentiment → higher escalation score</td></tr>
+  </table>
+</div>
+
+<!-- Hypothesis Tests -->
+<div class="grid-full card">
+  <h3>2 — Hypothesis Testing  (Chi-Square · One-Way ANOVA)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    All tests use α = 0.05. Two-tailed where applicable.
+  </p>
+  {_CHART("stats_hypothesis_tests.png")}
+  <table style="margin-top:14px;">
+    <tr><th>Hypothesis</th><th>Test</th><th>Statistic</th><th>p-value</th><th>Effect Size</th><th>Conclusion</th></tr>
+    <tr>
+      <td>H1: China &amp; USA mentions are independent</td>
+      <td>Chi-Square</td>
+      <td>χ² = {_fmt(chi_res.get('chi2_statistic', 0), 3)}</td>
+      <td>{_sig_badge(chi_p)}</td>
+      <td>Cramér's V = {_fmt(chi_res.get('cramers_v', 0), 3)}</td>
+      <td>{chi_res.get('conclusion', 'N/A')}</td>
+    </tr>
+    <tr>
+      <td>H2: Sentiment differs across conflict theaters</td>
+      <td>One-Way ANOVA</td>
+      <td>F = {_fmt(anova_res.get('f_statistic', 0), 3)}</td>
+      <td>{_sig_badge(anova_p)}</td>
+      <td>η² = {_fmt(anova_res.get('eta_squared', 0), 3)}</td>
+      <td>{anova_res.get('conclusion', 'N/A')}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══ SECTION 7 — CHROMADB SEMANTIC ANALYSIS ═══ -->
+<h2>Section 7 — Semantic Vector Analysis  (ChromaDB + Ollama Embeddings)</h2>
 <p style="color:var(--muted); font-size:12px; margin-bottom:14px;">
   Articles were chunked and embedded via <code>nomic-embed-text</code>  (local Ollama).
   Themes are queried by semantic similarity — distance threshold ≤ 1.0.
@@ -408,7 +550,7 @@ def generate_html_report(sqlite_stats, vector_stats):
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   WW3 Geopolitical Intelligence Pipeline  |  Sources: RSS Feeds + NewsAPI
-  |  NLP: TextBlob + scikit-learn  |  Vectors: ChromaDB + Ollama
+  |  NLP: Domain Lexicon + scikit-learn  |  Stats: scipy + statsmodels  |  Vectors: ChromaDB + Ollama
   |  Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 </div>
 

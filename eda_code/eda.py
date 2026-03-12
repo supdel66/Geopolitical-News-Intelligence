@@ -41,9 +41,9 @@ KEYWORDS = [
 
 # Geopolitical actors + aliases
 CONFLICT_ACTORS = {
-    "Israel":       ["israel", "idf", "netanyahu", "tel aviv", "jerusalem"],
+    A":         "Israel":       ["israel", "idf", "netanyahu", "tel aviv", "jerusalem"],
     "Iran":         ["iran", "tehran", "khamenei", "irgc", "iranians"],
-    "USA":          ["united states", " us ", "america", "biden", "trump", "pentagon", "washington dc"],
+    "US ["united states", " us ", "america", "biden", "trump", "pentagon", "washington dc"],
     "Russia":       ["russia", "putin", "moscow", "kremlin", "russian"],
     "Ukraine":      ["ukraine", "zelensky", "kyiv", "kiev", "ukrainian"],
     "China":        ["china", "beijing", "xi jinping", "pla", "chinese army"],
@@ -139,14 +139,108 @@ def classify_theater(text):
     return best if scores[best] > 0 else "Other"
 
 
+# ─────────────────────────────────────────────
+# CONFLICT-DOMAIN SENTIMENT LEXICON
+# General-purpose tools (TextBlob) score military/conflict language near-zero
+# because their training corpora are not conflict-domain-specific.
+# This lexicon directly captures the affective valence of conflict journalism.
+# ─────────────────────────────────────────────
+
+_CONFLICT_NEG_LEX = {
+    # Kinetic / lethal events
+    "killed": -4, "kill": -3, "killing": -3, "kills": -3,
+    "massacred": -5, "massacre": -5, "executed": -4, "execution": -4,
+    "slaughtered": -4, "genocide": -5, "ethnic cleansing": -5,
+    "war crime": -4, "atrocity": -4, "atrocities": -4,
+    "bombed": -3, "bombing": -3, "bomb": -2, "airstrike": -3, "airstrikes": -3,
+    "struck": -3, "strike": -2, "attacked": -3, "attack": -2, "attacks": -3,
+    "wounded": -3, "casualties": -3, "casualty": -3, "death": -3, "deaths": -3,
+    "destroyed": -3, "destruction": -3, "demolished": -3,
+    # Territorial / political
+    "invasion": -4, "invaded": -4, "occupy": -3, "occupation": -3,
+    "hostage": -4, "kidnapped": -4, "abducted": -4,
+    "sanctions": -2, "sanction": -2, "expelled": -2,
+    "detained": -3, "arrested": -2, "imprisoned": -3,
+    "siege": -3, "besieged": -3, "blockade": -3,
+    # Escalation language
+    "nuclear": -3, "thermonuclear": -4, "missile": -2, "rocket": -2,
+    "escalation": -2, "escalated": -2, "escalate": -2,
+    "retaliation": -3, "retaliatory": -3, "offensive": -2, "aggression": -3,
+    # Tension / instability
+    "crisis": -2, "tensions": -2, "tension": -1, "hostile": -2, "hostility": -3,
+    "provocation": -2, "threat": -2, "threatened": -3, "threatening": -2,
+    "violation": -2, "violated": -2, "condemned": -2, "condemn": -2,
+    "collapse": -3, "collaps": -3, "failed": -2, "failure": -2,
+    "war": -3, "warfare": -3, "conflict": -2, "embargo": -2,
+    "unrest": -2, "riot": -3, "protest": -1,
+}
+
+_CONFLICT_POS_LEX = {
+    # Ceasefires / peace agreements
+    "ceasefire": 5, "cease-fire": 5, "truce": 5,
+    "peace deal": 5, "peace agreement": 5, "peace": 4, "peaceful": 3,
+    "agreement": 3, "accord": 3, "treaty": 4, "pact": 3,
+    # Diplomacy
+    "diplomatic": 3, "diplomacy": 3, "mediation": 3, "mediator": 3,
+    "negotiation": 3, "negotiate": 2, "negotiations": 3, "talks": 2, "dialogue": 3,
+    # Resolution / recovery
+    "deal": 2, "resolved": 3, "resolution": 3,
+    "cooperation": 3, "cooperate": 2,
+    "withdrawal": 3, "withdrew": 3, "pullout": 3,
+    "released": 3, "freed": 3, "liberation": 3, "liberated": 3,
+    "humanitarian aid": 3, "humanitarian": 2, "relief": 3, "reconstruction": 3,
+    "stabilized": 3, "stability": 3, "stabilization": 3,
+    "reconciliation": 4, "normalization": 3, "normalized": 3,
+    "progress": 2, "improved": 2, "recovery": 3,
+    "protected": 2, "safety": 2, "safe": 2,
+}
+
+
 def get_sentiment_polarity(text):
-    """TextBlob polarity on first 500 chars. Returns 0.0 if unavailable."""
-    if not _HAS_TEXTBLOB or not isinstance(text, str) or not text.strip():
+    """
+    Hybrid conflict-domain sentiment scorer.
+
+    Primary score: domain-specific geopolitical lexicon, calibrated for
+    conflict journalism where general-purpose lexicons return near-zero
+    because military language lacks affective valence in those corpora.
+
+    Secondary: TextBlob general tone (if available) as a 30% blend.
+
+    Returns polarity in [-1.0, 1.0].
+    """
+    if not isinstance(text, str) or not text.strip():
         return 0.0
-    try:
-        return float(TextBlob(text[:500]).sentiment.polarity)
-    except Exception:
-        return 0.0
+
+    tl = text.lower()
+    word_count = max(len(tl.split()), 1)
+
+    # Compute domain lexicon score (phrase-aware)
+    raw_score = 0.0
+    for phrase, weight in _CONFLICT_NEG_LEX.items():
+        cnt = tl.count(phrase)
+        if cnt:
+            raw_score += cnt * weight
+    for phrase, weight in _CONFLICT_POS_LEX.items():
+        cnt = tl.count(phrase)
+        if cnt:
+            raw_score += cnt * weight
+
+    # Normalize by log(word_count) to reduce length bias; scale to [-1, 1]
+    log_wc = max(float(np.log(word_count)), 1.0)
+    lexicon_score = raw_score / log_wc * 0.3
+    lexicon_score = max(-1.0, min(1.0, lexicon_score))
+
+    # TextBlob secondary component — full text, not truncated
+    if _HAS_TEXTBLOB:
+        try:
+            tb_pol = float(TextBlob(text[:3000]).sentiment.polarity)
+        except Exception:
+            tb_pol = 0.0
+        final = 0.7 * lexicon_score + 0.3 * tb_pol
+    else:
+        final = lexicon_score
+
+    return round(max(-1.0, min(1.0, final)), 4)
 
 
 def label_sentiment(polarity):
@@ -449,7 +543,7 @@ def run_eda(df):
         bplot = sns.boxplot(
             data=df_src_sent, x='sentiment_polarity', y='source',
             order=order, ax=axes[0],
-            palette=sent_palette, linewidth=0.8,
+            hue='source', palette=sent_palette, linewidth=0.8, legend=False,
             flierprops=dict(marker='o', markerfacecolor=WARN, markersize=3, alpha=0.5)
         )
         axes[0].axvline(0, color=TEXT_COLOR, linestyle='--', linewidth=0.9, alpha=0.6)

@@ -34,13 +34,13 @@
 
   /* ── Threat banner */
   .threat-banner {
-    border: 2px solid #3fb950;
+    border: 2px solid #f0883e;
     border-radius: 10px; padding: 16px 24px;
     margin-bottom: 28px; text-align: center;
-    background: #3fb95018;
+    background: #f0883e18;
   }
-  .threat-value { font-size: 52px; font-weight: 900; color: #3fb950; line-height: 1; }
-  .threat-label { font-size: 18px; font-weight: 700; color: #3fb950; letter-spacing: 3px; }
+  .threat-value { font-size: 52px; font-weight: 900; color: #f0883e; line-height: 1; }
+  .threat-label { font-size: 18px; font-weight: 700; color: #f0883e; letter-spacing: 3px; }
   .threat-sub   { color: var(--muted); font-size: 12px; margin-top: 6px; }
 
   /* ── Metrics row */
@@ -54,9 +54,9 @@
 
   /* ── Sentiment bar */
   .sent-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; margin: 8px 0; }
-  .sent-pos { background: var(--green);  flex: 0; }
-  .sent-neu { background: var(--orange); flex: 100.0; }
-  .sent-neg { background: var(--red);    flex: 0; }
+  .sent-pos { background: var(--green);  flex: 14.6; }
+  .sent-neu { background: var(--orange); flex: 10.5; }
+  .sent-neg { background: var(--red);    flex: 74.9; }
 
   /* ── Section headings */
   h2 {
@@ -101,13 +101,13 @@
 <!-- ═══ HEADER ═══ -->
 <div class="header">
   <h1>WW3 GEOPOLITICAL INTELLIGENCE DASHBOARD</h1>
-  <p>Automated ETL + EDA Pipeline  |  1,220 articles analysed  |  Generated: 2026-03-11 22:48:48</p>
+  <p>Automated ETL + EDA Pipeline  |  1,348 articles analysed  |  Generated: 2026-03-12 14:47:12</p>
 </div>
 
 <!-- ═══ THREAT LEVEL BANNER ═══ -->
 <div class="threat-banner">
-  <div class="threat-value">19.0</div>
-  <div class="threat-label">WW3 THREAT LEVEL — LOW</div>
+  <div class="threat-value">30.0</div>
+  <div class="threat-label">WW3 THREAT LEVEL — MODERATE</div>
   <div class="threat-sub">
     Composite score from: escalation keywords, nuclear density, negative sentiment, WW3 phrase frequency, missile mentions.
     Scale: 0 (no threat) → 100 (critical).
@@ -117,7 +117,7 @@
 <!-- ═══ TOP METRICS ═══ -->
 <div class="metrics">
   <div class="metric">
-    <div class="metric-value">1,220</div>
+    <div class="metric-value">1,348</div>
     <div class="metric-label">Articles Analysed</div>
   </div>
   <div class="metric">
@@ -125,16 +125,16 @@
     <div class="metric-label">Unique Sources</div>
   </div>
   <div class="metric">
-    <div class="metric-value">901</div>
+    <div class="metric-value">897</div>
     <div class="metric-label">Avg Word Count</div>
   </div>
   <div class="metric">
-    <div class="metric-value">34.1</div>
+    <div class="metric-value">33.6</div>
     <div class="metric-label">Avg Escalation Score</div>
   </div>
   <div class="metric">
-    <div class="metric-value" style="color: var(--green)">
-      +0.000
+    <div class="metric-value" style="color: var(--red)">
+      -0.334
     </div>
     <div class="metric-label">Avg Sentiment Polarity</div>
   </div>
@@ -153,9 +153,9 @@
     <div class="sent-neg"></div>
   </div>
   <div style="display:flex; gap:14px; margin-top:6px; font-size:12px;">
-    <span class="tag tag-pos">Positive 0.0%</span>
-    <span class="tag tag-neu">Neutral 100.0%</span>
-    <span class="tag tag-neg">Negative 0.0%</span>
+    <span class="tag tag-pos">Positive 14.6%</span>
+    <span class="tag tag-neu">Neutral 10.5%</span>
+    <span class="tag tag-neg">Negative 74.9%</span>
   </div>
 </div>
 
@@ -171,7 +171,7 @@
     <img src="top_sources.png" alt="top_sources.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: top_sources.png]</p>
     <table>
       <tr><th>Source</th><th>Articles</th></tr>
-      <tr><td>Yahoo_News</td><td>79</td></tr><tr><td>Guardian</td><td>72</td></tr><tr><td>The Times of India</td><td>67</td></tr><tr><td>BBC</td><td>59</td></tr><tr><td>Al_Jazeera</td><td>53</td></tr><tr><td>Fox_News</td><td>50</td></tr><tr><td>New_York_Times</td><td>34</td></tr><tr><td>Yahoo Entertainment</td><td>34</td></tr><tr><td>CNN</td><td>32</td></tr><tr><td>Associated_Press</td><td>30</td></tr>
+      <tr><td>Yahoo_News</td><td>88</td></tr><tr><td>Guardian</td><td>80</td></tr><tr><td>The Times of India</td><td>73</td></tr><tr><td>BBC</td><td>68</td></tr><tr><td>Al_Jazeera</td><td>68</td></tr><tr><td>Fox_News</td><td>51</td></tr><tr><td>New_York_Times</td><td>42</td></tr><tr><td>Associated_Press</td><td>40</td></tr><tr><td>Yahoo Entertainment</td><td>34</td></tr><tr><td>CNN</td><td>32</td></tr>
     </table>
   </div>
   <div class="card">
@@ -184,7 +184,7 @@
   <div class="card">
     <h3>Article Word Count Distribution</h3>
     <p style="color:var(--muted); font-size:12px; margin-bottom:8px;">
-      Mean: <b>901</b> words  |  Median: <b>524</b> words
+      Mean: <b>897</b> words  |  Median: <b>520</b> words
     </p>
     <img src="article_length_dist.png" alt="article_length_dist.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: article_length_dist.png]</p>
   </div>
@@ -203,7 +203,7 @@
     <img src="country_actor_mentions.png" alt="country_actor_mentions.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: country_actor_mentions.png]</p>
     <table>
       <tr><th>Actor / Country</th><th>Total Mentions</th></tr>
-      <tr><td>Iran</td><td>10,217</td></tr><tr><td>USA</td><td>9,830</td></tr><tr><td>Israel</td><td>5,154</td></tr><tr><td>China</td><td>4,232</td></tr><tr><td>Saudi Arabia</td><td>930</td></tr><tr><td>Lebanon</td><td>734</td></tr><tr><td>Russia</td><td>722</td></tr><tr><td>Hezbollah</td><td>503</td></tr><tr><td>Ukraine</td><td>350</td></tr><tr><td>NATO</td><td>297</td></tr><tr><td>Houthis</td><td>189</td></tr><tr><td>Syria</td><td>155</td></tr>
+      <tr><td>Iran</td><td>11,108</td></tr><tr><td>USA</td><td>10,452</td></tr><tr><td>Israel</td><td>5,722</td></tr><tr><td>China</td><td>4,802</td></tr><tr><td>Saudi Arabia</td><td>950</td></tr><tr><td>Lebanon</td><td>946</td></tr><tr><td>Russia</td><td>883</td></tr><tr><td>Hezbollah</td><td>623</td></tr><tr><td>Ukraine</td><td>403</td></tr><tr><td>NATO</td><td>312</td></tr><tr><td>Houthis</td><td>199</td></tr><tr><td>Hamas</td><td>166</td></tr>
     </table>
   </div>
   <div class="card">
@@ -211,7 +211,7 @@
     <img src="conflict_theaters.png" alt="conflict_theaters.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: conflict_theaters.png]</p>
     <table>
       <tr><th>Theater</th><th>Articles</th></tr>
-      <tr><td>Middle East</td><td>557</td></tr><tr><td>US Policy/Sanctions</td><td>385</td></tr><tr><td>Other</td><td>168</td></tr><tr><td>Asia-Pacific</td><td>53</td></tr><tr><td>Russia/Ukraine</td><td>49</td></tr><tr><td>Global WW3</td><td>8</td></tr>
+      <tr><td>Middle East</td><td>614</td></tr><tr><td>US Policy/Sanctions</td><td>413</td></tr><tr><td>Other</td><td>196</td></tr><tr><td>Asia-Pacific</td><td>65</td></tr><tr><td>Russia/Ukraine</td><td>52</td></tr><tr><td>Global WW3</td><td>8</td></tr>
     </table>
   </div>
 </div>
@@ -232,7 +232,7 @@
   <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
     Each article receives a weighted keyword score (nuclear=10, missile=5, ceasefire=−3 …).
     High scores indicate more intense conflict language. Rolling 3-day average shows trajectory.
-    Avg score: <b>34.07 / 100</b>
+    Avg score: <b>33.64 / 100</b>
   </p>
   <img src="escalation_trend.png" alt="escalation_trend.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: escalation_trend.png]</p>
 </div>
@@ -240,9 +240,11 @@
 <div class="grid-full card">
   <h3>Sentiment Analysis — By Source &amp; Over Time</h3>
   <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
-    TextBlob polarity: −1 (very negative) → +1 (very positive).
+    Hybrid conflict-domain sentiment scorer: primary score from a curated geopolitical lexicon
+    (conflict words weighted −1→−5; ceasefire/peace +2→+5), blended 70:30 with TextBlob.
+    Polarity: −1 (strongly negative) → +1 (strongly positive).
     Left: Median polarity per source. Right: Daily rolling sentiment trend.
-    Overall avg: <b>+0.000</b>
+    Overall avg: <b>-0.334</b>
   </p>
   <img src="sentiment_analysis.png" alt="sentiment_analysis.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: sentiment_analysis.png]</p>
 </div>
@@ -283,20 +285,121 @@
     <h3>Top Bigrams</h3>
     <table>
       <tr><th>Phrase</th><th>Count</th></tr>
-      <tr><td colspan="2" style="color:var(--muted)">N/A</td></tr>
+      <tr><td>middle east</td><td>914</td></tr><tr><td>united states</td><td>856</td></tr><tr><td>npr org</td><td>762</td></tr><tr><td>supreme leader</td><td>648</td></tr><tr><td>strait hormuz</td><td>600</td></tr><tr><td>rights reserved</td><td>490</td></tr><tr><td>donald trump</td><td>488</td></tr><tr><td>saudi arabia</td><td>427</td></tr><tr><td>terms use</td><td>411</td></tr><tr><td>prime minister</td><td>404</td></tr>
     </table>
   </div>
   <div class="card">
     <h3>Top Trigrams</h3>
     <table>
       <tr><th>Phrase</th><th>Count</th></tr>
-      <tr><td colspan="2" style="color:var(--muted)">N/A</td></tr>
+      <tr><td>2026 npr rights</td><td>381</td></tr><tr><td>accuracy availability npr</td><td>381</td></tr><tr><td>audio audio npr</td><td>381</td></tr><tr><td>audio npr org</td><td>381</td></tr><tr><td>authoritative record npr</td><td>381</td></tr><tr><td>availability npr transcripts</td><td>381</td></tr><tr><td>broadcast publication authoritative</td><td>381</td></tr><tr><td>copyright 2026 npr</td><td>381</td></tr>
     </table>
   </div>
 </div>
 
-<!-- ═══ SECTION 6 — CHROMADB SEMANTIC ANALYSIS ═══ -->
-<h2>Section 6 — Semantic Vector Analysis  (ChromaDB + Ollama Embeddings)</h2>
+<!-- ═══ SECTION 6 — STATISTICAL ANALYSIS ═══ -->
+<h2>Section 6 — Statistical Analysis  (Descriptive + Inferential)</h2>
+<p style="color:var(--muted); font-size:12px; margin-bottom:14px;">
+  Rigorous statistical analysis using <code>scipy.stats</code>, <code>statsmodels</code>, and <code>pandas</code>.
+  Verifies three key hypotheses about the conflict news corpus.
+</p>
+
+<!-- Descriptive stats table -->
+<div class="grid-full card">
+  <h3>1A — Descriptive Statistics  (Skewness &amp; Excess Kurtosis)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Excess kurtosis &gt; 0 = leptokurtic (heavy tails); &lt; 0 = platykurtic.
+    Skewness &gt; 0 = right-tailed; &lt; 0 = left-tailed.
+  </p>
+  <img src="stats_distributions.png" alt="stats_distributions.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: stats_distributions.png]</p>
+  <table style="margin-top:14px;">
+    <tr>
+      <th>Variable</th><th>N</th><th>Mean</th><th>Median</th>
+      <th>Std Dev</th><th>Skewness</th><th>Excess Kurtosis</th>
+    </tr>
+    <tr><td>Word Count</td><td>1348</td><td>897.4050</td><td>519.5000</td><td>1893.5761</td><td>6.8558</td><td>61.1529</td></tr><tr><td>Escalation Score</td><td>1348</td><td>33.6380</td><td>16.0000</td><td>36.1545</td><td>0.8837</td><td>-0.7703</td></tr><tr><td>Sentiment Polarity</td><td>1348</td><td>-0.3342</td><td>-0.3995</td><td>0.3673</td><td>0.7356</td><td>-0.2288</td></tr>
+  </table>
+</div>
+
+<!-- Correlation / Covariance -->
+<div class="grid-full card">
+  <h3>1B — Pearson Correlation &amp; Covariance Matrices</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Pearson r measures linear dependency between numeric variables.
+    Covariance captures the raw joint variability (scale-dependent).
+  </p>
+  <img src="stats_correlation_matrices.png" alt="stats_correlation_matrices.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: stats_correlation_matrices.png]</p>
+</div>
+
+<!-- Zipf's Law -->
+<div class="grid-full card">
+  <h3>1C — Zipf's Law  (Global Keyword Frequency Distribution)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Natural language corpora follow Zipf's law: frequency ∝ rank<sup>−1</sup>.
+    A fitted slope near −1.0 on the log-log plot confirms this corpus obeys the power law,
+    validating that the text is representative natural language rather than fabricated or
+    heavily templated content.
+  </p>
+  <img src="stats_zipf_distribution.png" alt="stats_zipf_distribution.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: stats_zipf_distribution.png]</p>
+</div>
+
+<!-- OLS Regression -->
+<div class="grid-full card">
+  <h3>1D — OLS Regression  (Escalation Score ~ Word Count + Sentiment)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    Tests whether article length and negativity jointly predict escalation intensity.
+    R² = <b>0.4980</b>  |  Adj R² = <b>0.4973</b>  |
+    F = <b>667.272</b>  (p = 0.0000)  |  N = 1348
+  </p>
+  <img src="stats_ols_regression.png" alt="stats_ols_regression.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: stats_ols_regression.png]</p>
+  <table style="margin-top:12px; max-width:500px;">
+    <tr><th>Term</th><th>Coefficient</th><th>Interpretation</th></tr>
+    <tr><td>Word Count</td><td>0.005844</td>
+        <td>Change in escalation per additional word</td></tr>
+    <tr><td>Sentiment Polarity</td><td>-59.9188</td>
+        <td>More negative sentiment → higher escalation score</td></tr>
+  </table>
+</div>
+
+<!-- Hypothesis Tests -->
+<div class="grid-full card">
+  <h3>2 — Hypothesis Testing  (Chi-Square · Welch's T-Test · One-Way ANOVA)</h3>
+  <p style="color:var(--muted); font-size:12px; margin-bottom:10px;">
+    All tests use α = 0.05. Two-tailed where applicable.
+  </p>
+  <img src="stats_hypothesis_tests.png" alt="stats_hypothesis_tests.png" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><p class="warn-missing">[Chart unavailable: stats_hypothesis_tests.png]</p>
+  <table style="margin-top:14px;">
+    <tr><th>Hypothesis</th><th>Test</th><th>Statistic</th><th>p-value</th><th>Effect Size</th><th>Conclusion</th></tr>
+    <tr>
+      <td>H1: China &amp; USA mentions are independent</td>
+      <td>Chi-Square</td>
+      <td>χ² = 94.932</td>
+      <td><span style="color:#ff4444;font-weight:700">★★★ p&lt;0.001</span></td>
+      <td>Cramér's V = 0.265</td>
+      <td>REJECT H0 — China and USA mentions are NOT independent in the news cycle</td>
+    </tr>
+    <tr>
+      <td>H2: Iran articles have higher escalation scores</td>
+      <td>Welch's T-Test</td>
+      <td>t = 21.724</td>
+      <td><span style="color:#ff4444;font-weight:700">★★★ p&lt;0.001</span></td>
+      <td>Cohen's d = 1.165
+          (large)</td>
+      <td>REJECT H0 — Iran articles have significantly higher escalation scores (μ=50.43 vs μ=14.45)</td>
+    </tr>
+    <tr>
+      <td>H3: Sentiment differs across conflict theaters</td>
+      <td>One-Way ANOVA</td>
+      <td>F = 50.338</td>
+      <td><span style="color:#ff4444;font-weight:700">★★★ p&lt;0.001</span></td>
+      <td>η² = 0.121</td>
+      <td>REJECT H0 — Sentiment polarity differs significantly across conflict theaters</td>
+    </tr>
+  </table>
+</div>
+
+<!-- ═══ SECTION 7 — CHROMADB SEMANTIC ANALYSIS ═══ -->
+<h2>Section 7 — Semantic Vector Analysis  (ChromaDB + Ollama Embeddings)</h2>
 <p style="color:var(--muted); font-size:12px; margin-bottom:14px;">
   Articles were chunked and embedded via <code>nomic-embed-text</code>  (local Ollama).
   Themes are queried by semantic similarity — distance threshold ≤ 1.0.
@@ -319,8 +422,8 @@
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   WW3 Geopolitical Intelligence Pipeline  |  Sources: RSS Feeds + NewsAPI
-  |  NLP: TextBlob + scikit-learn  |  Vectors: ChromaDB + Ollama
-  |  Generated: 2026-03-11 22:48:48
+  |  NLP: Domain Lexicon + scikit-learn  |  Stats: scipy + statsmodels  |  Vectors: ChromaDB + Ollama
+  |  Generated: 2026-03-12 14:47:12
 </div>
 
 </body>
