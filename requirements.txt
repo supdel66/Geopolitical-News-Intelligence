@@ -8,3 +8,4 @@ chromadb
 ollama 
 fastapi
 uvicorn
+schedule 
