@@ -41,9 +41,9 @@ KEYWORDS = [
 
 # Geopolitical actors + aliases
 CONFLICT_ACTORS = {
-    A":         "Israel":       ["israel", "idf", "netanyahu", "tel aviv", "jerusalem"],
-    "Iran":         ["iran", "tehran", "khamenei", "irgc", "iranians"],
-    "US ["united states", " us ", "america", "biden", "trump", "pentagon", "washington dc"],
+    "Israel":       ["israel", "idf", "netanyahu", "tel aviv", "jerusalem"],
+    "Iran"  :         ["iran", "tehran", "khamenei", "irgc", "iranians"],
+    "US": ["united states", " us ", "america", "biden", "trump", "pentagon", "washington dc"],
     "Russia":       ["russia", "putin", "moscow", "kremlin", "russian"],
     "Ukraine":      ["ukraine", "zelensky", "kyiv", "kiev", "ukrainian"],
     "China":        ["china", "beijing", "xi jinping", "pla", "chinese army"],

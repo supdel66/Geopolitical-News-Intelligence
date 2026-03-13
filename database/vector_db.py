@@ -1,136 +1,121 @@
 import chromadb
 import chromadb.utils.embedding_functions as embedding_functions
 import os
-import pandas as pd
-from utils import timer_logger, logger
+from utils import logger
+import logging
 
-CHROMA_DIR = "chromadb"
-
-def chunk_text(text, max_length=500):
-    """
-    Manually chunk text into pieces of strictly <= max_length characters.
-    Attempts to split by sentences, but enforces a hard limit for excessively long blocks.
-    """
-    if not text or not isinstance(text, str):
-        return []
+class VectorDatabase:
+    def __init__(self, chroma_dir="chromadb", model_name="qwen3-embedding:0.6B", collection_name="news_articles"):
+        self.chroma_dir = chroma_dir
+        self.model_name = model_name
+        self.collection_name = collection_name
         
-    # Split by periods to get sentences
-    sentences = text.replace('\n', ' ').split('. ')
-    
-    chunks = []
-    current_chunk = ""
-    
-    for sentence in sentences:
-        sentence = sentence.strip()
-        if not sentence: continue
-        sentence += ". "
-        
-        # If the sentence itself is larger than the max_length limit, 
-        # we MUST slice it up forcibly into smaller sub-chunks so it doesn't crash Ollama
-        if len(sentence) > max_length:
-            # First, save whatever current chunk we were building if it exists
-            if current_chunk:
-                chunks.append(current_chunk.strip())
-                current_chunk = ""
-                
-            # Now, force-split the massive sentence into strict max_length sized chunks
-            for i in range(0, len(sentence), max_length):
-                sub_chunk = sentence[i:i+max_length]
-                if sub_chunk:
-                    chunks.append(sub_chunk.strip())
-            continue
+    def chunk_text_generator(self, text, max_length=500):
+        """
+        Yields chunks of text strictly <= max_length characters using a generator pattern.
+        """
+        if not text or not isinstance(text, str):
+            return
             
-        # If adding the new sentence keeps us under the limit, add it
-        if len(current_chunk) + len(sentence) <= max_length:
-            current_chunk += sentence
-        else:
-            # We reached the limit. Save current chunk.
-            if current_chunk:
-                chunks.append(current_chunk.strip())
-            # Start the new chunk with the sentence that didn't fit
-            current_chunk = sentence
+        sentences = text.replace('\n', ' ').split('. ')
+        current_chunk = ""
+        
+        for sentence in sentences:
+            sentence = sentence.strip()
+            if not sentence: continue
+            sentence += ". "
             
-    # Add any leftover text in the final chunk
-    if current_chunk:
-        chunks.append(current_chunk.strip())
-        
-    return chunks
-
-@timer_logger
-def store_articles_in_vector_db(df):
-    """
-    Takes the SQLite dataframe, chunks the text natively, 
-    and inserts it into a local ChromaDB instance via Ollama.
-    """
-    if df.empty:
-        logger.warning("[VectorDB] No articles provided to store.")
-        return
-
-    logger.info("[VectorDB] Initializing ChromaDB persistent client...")
-    if not os.path.exists(CHROMA_DIR):
-        os.makedirs(CHROMA_DIR)
-        
-    client = chromadb.PersistentClient(path=CHROMA_DIR)
-    
-    logger.info("[VectorDB] Configuring native Ollama Embedding Function (nomic-embed-text)...")
-    # This natively communicates with your local Ollama instance running on port 11434
-    ollama_ef = embedding_functions.OllamaEmbeddingFunction(
-        url="http://localhost:11434/api/embeddings",
-        model_name="qwen3-embedding:0.6B",
-    )
-    
-    # Get or create the table (collection)
-    collection = client.get_or_create_collection(
-        name="news_articles", 
-        embedding_function=ollama_ef
-    )
-
-    documents = []
-    metadatas = []
-    ids = []
-    
-    chunk_counter = 0
-
-    logger.info("[VectorDB] Chunking articles manually and preparing for insertion...")
-    for index, row in df.iterrows():
-        # Using SQLite auto-increment ID if available
-        article_id = str(row.get('id', index))
-        title = str(row.get('title', ''))
-        content = str(row.get('content', ''))
-        
-        # Combine title and content as they both hold valuable context
-        full_text = f"{title}. {content}"
-        
-        # Call our manual Python chunker
-        chunks = chunk_text(full_text, max_length=500)
-        
-        for i, chunk in enumerate(chunks):
-            if chunk: 
-                chunk_id = f"{article_id}_chunk_{i}"
-                documents.append(chunk)
+            if len(sentence) > max_length:
+                if current_chunk:
+                    yield current_chunk.strip()
+                    current_chunk = ""
+                    
+                for i in range(0, len(sentence), max_length):
+                    sub_chunk = sentence[i:i+max_length]
+                    if sub_chunk:
+                        yield sub_chunk.strip()
+                continue
                 
-                # Attach metadata so future RAG queries can mathematically link back to the SQLite row!
-                metadatas.append({
-                    "original_article_id": article_id,
-                    "source": str(row.get('source', '')),
-                    "url": str(row.get('link', '')),
-                    "published_at": str(row.get('published_at', ''))
-                })
-                ids.append(chunk_id)
-                chunk_counter += 1
+            if len(current_chunk) + len(sentence) <= max_length:
+                current_chunk += sentence
+            else:
+                if current_chunk:
+                    yield current_chunk.strip()
+                current_chunk = sentence
+                
+        if current_chunk:
+            yield current_chunk.strip()
 
-    if documents:
-        logger.info(f"[VectorDB] Sending {chunk_counter} chunked items to Ollama & saving to ChromaDB...")
-        # Upsert adds new items or updates existing items based on chunk_id
-        # We process in batches of 50 to ensure local Ollama isn't overwhelmed instantly
-        batch_size = 50
-        for i in range(0, len(documents), batch_size):
-            end_idx = i + batch_size
+    def store_articles_in_vector_db(self, articles_iterator):
+        """
+        Takes an iterator of SQLite dictionaries, chunks the text natively via generator, 
+        and inserts it into a local ChromaDB instance via Ollama.
+        """
+        logger.info("[VectorDB] Initializing ChromaDB persistent client...")
+        if not os.path.exists(self.chroma_dir):
+            os.makedirs(self.chroma_dir)
+            
+        client = chromadb.PersistentClient(path=self.chroma_dir)
+        
+        logger.info("[VectorDB] Configuring native Ollama Embedding Function...")
+        ollama_ef = embedding_functions.OllamaEmbeddingFunction(
+            url="http://localhost:11434/api/embeddings",
+            model_name=self.model_name,
+        )
+        
+        collection = client.get_or_create_collection(
+            name=self.collection_name, 
+            embedding_function=ollama_ef
+        )
+
+        documents = []
+        metadatas = []
+        ids = []
+        
+        chunk_counter = 0
+
+        logger.info("[VectorDB] Consuming DB Iterator, Chunking logic, and preparing for insertion...")
+        
+        for row in articles_iterator:
+            article_id = str(row.get('id', ''))
+            title = str(row.get('title', ''))
+            content = str(row.get('content', ''))
+            
+            full_text = f"{title}. {content}"
+            
+            # Consume the chunk generator for this specific article
+            for i, chunk in enumerate(self.chunk_text_generator(full_text, max_length=500)):
+                if chunk: 
+                    chunk_id = f"{article_id}_chunk_{i}"
+                    documents.append(chunk)
+                    
+                    metadatas.append({
+                        "original_article_id": article_id,
+                        "source": str(row.get('source', '')),
+                        "url": str(row.get('link', '')),
+                        "published_at": str(row.get('published_at', ''))
+                    })
+                    ids.append(chunk_id)
+                    chunk_counter += 1
+
+                # Dynamic batch yielding/upsert
+                if len(documents) >= 50:
+                    collection.upsert(
+                        documents=documents,
+                        metadatas=metadatas,
+                        ids=ids
+                    )
+                    documents = []
+                    metadatas = []
+                    ids = []
+
+        # Flush any remaining chunks
+        if documents:
+            logger.info(f"[VectorDB] Sending final {len(documents)} chunked items to Ollama & saving to ChromaDB...")
             collection.upsert(
-                documents=documents[i:end_idx],
-                metadatas=metadatas[i:end_idx],
-                ids=ids[i:end_idx]
+                documents=documents,
+                metadatas=metadatas,
+                ids=ids
             )
-        logger.info("[VectorDB] Insertion complete! Your articles are now embedded.")
-    else:
-        logger.warning("[VectorDB] No textual chunks created.")
+            
+        logger.info(f"[VectorDB] Insertion complete! {chunk_counter} textual chunks are now embedded.")

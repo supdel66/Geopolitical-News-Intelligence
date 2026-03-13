@@ -159,7 +159,7 @@ The system is designed for researchers, journalists, and analysts tracking globa
 | **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS 4 |
 | **Databases** | SQLite (structured), ChromaDB (vector) |
 | **NLP/ML** | TextBlob, scikit-learn, spaCy |
-| **LLM/Embeddings** | Ollama (llama3.2:3b, qwen3-embedding:0.6B) |
+| **LLM/Embeddings** | Ollama (llama3.2:3b, qwen3-embedding:0.6B, mnomic-embed-text) |
 | **Visualization** | Matplotlib, Seaborn |
 | **Scraping** | BeautifulSoup, feedparser, requests |
 
