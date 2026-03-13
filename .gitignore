@@ -2,5 +2,5 @@ chromadb/
 sqlite_databases/
 .venv/ 
 ask.py 
-ragfrontend/
 ask.py
+eda_output/
