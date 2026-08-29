@@ -55,8 +55,6 @@ class ChatResponse(BaseModel):
     sources: List[ArticleInfo]
 
 
-
-
 # --- Helper Functions ---
 
 def get_db_connection():
